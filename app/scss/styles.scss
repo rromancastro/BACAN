@@ -1,0 +1,50 @@
+// sass --watch app/scss/styles.scss app/globals.css
+
+@use './sections/header';
+@use './sections/secondSection';
+@use './sections/thirdSection';
+@use './sections/fourthSection';
+@use './sections/fifthSection';
+@use './sections/sixthSection';
+@use './components/formas';
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button {
+    font-family: 'Montserrat';
+}
+
+html {
+  overflow-x: hidden;
+}

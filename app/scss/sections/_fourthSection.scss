@@ -1,0 +1,75 @@
+#fourthSection {
+    background-color: #F8CD78;
+    height: 100dvh;
+    transition: 1.5s;
+}
+
+#fourthSectionImagenesContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 87dvh;
+}
+
+.fourthSectionImage {
+    object-fit: contain;
+    transition: 1s;
+    position: absolute;
+    top: 40%;
+}
+
+#fourthSectionImage1 {
+    z-index: 70;
+}
+
+#fourthSectionImage2 {
+    z-index: 60;
+}
+
+#fourthSectionImage3 {
+    z-index: 50;
+}
+
+#fourthSectionImage4 {
+    z-index: 40;
+}
+
+#fourthSectionImage5 {
+    z-index: 30;
+}
+
+#fourthSectionImage6 {
+    z-index: 20;
+}
+
+#fourthSectionImage7 {
+    z-index: 10;
+}
+
+#fourthSectionTextosContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    height: 100dvh;
+}
+
+#fourthSectionH2 {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #000000;
+    transition: 1s;
+}
+
+#fourthSectionP {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    transition: 1s;
+}

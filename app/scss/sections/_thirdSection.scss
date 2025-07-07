@@ -1,0 +1,33 @@
+#thirdSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#thirdSectionH2 {
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#thirdSectionCardsContainer {
+    display: grid;
+    width: 732px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 214px);
+    grid-template-areas: 'area1 area2 area2'
+                         'area1 area3 area4'
+                         'area5 area5 area6';
+    gap: 23px;
+    padding-bottom: 96px;
+}
+
+.card2 {
+    transition: .5s;
+}
+.card1Image {
+    transition: .5s;
+}
