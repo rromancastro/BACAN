@@ -173,7 +173,7 @@
   height: 26px;
   background-color: #FFFFFF;
   padding: 8px;
-  border-radius: 13;
+  border-radius: 13px;
   transition: 0.5s;
   cursor: pointer;
 }
