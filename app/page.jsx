@@ -1,7 +1,7 @@
 "use client"
 
 import { NavBar } from "./components";
-import { FifthSection, FirstSection, SecondSection, ThirdSection, SixthSection} from "./sections";
+import { FifthSection, FirstSection, SecondSection, ThirdSection, SixthSection, SeventhSection, EigthSection} from "./sections";
 import { FourthSection } from "./sections/FourthSection";
 
 
@@ -22,6 +22,10 @@ export default function Home() {
       <FifthSection />
 
       <SixthSection />
+
+      <SeventhSection />
+
+      <EigthSection />
 
   </div>);
 }

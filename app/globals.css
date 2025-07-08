@@ -381,6 +381,131 @@
   margin-bottom: 24px;
 }
 
+#seventhSection {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 8%;
+  padding-right: 8%;
+  height: 100%;
+}
+
+#seventhSectionContent {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+#seventhSectionIframe {
+  height: 80dvh;
+  width: 100%;
+}
+
+#seventhSectionPlaceholder {
+  background-image: url("/seventhSection/1.png");
+  background-position: center;
+  background-size: cover;
+  height: 80dvh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#seventhSectionPlaceholderH2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+#seventhSectionPlaceholderP {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+#seventhSectionPlaceholderIcon {
+  position: absolute;
+  width: 64px;
+  height: 45px;
+  align-self: center;
+  top: 50%;
+  cursor: pointer;
+}
+
+#eigthSection {
+  background-color: #7ABDEC;
+  width: 100%;
+  height: 87dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1A4869;
+}
+#eigthSection h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+#eigthSection p {
+  font-size: 10px;
+  font-weight: 400;
+}
+#eigthSection span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#eigthSectionContent {
+  height: 65dvh;
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "div1 div2 div2" "div1 div2 div2" "div1 div3 div3";
+  gap: 24px;
+}
+
+#eightSectionDiv1 {
+  grid-area: div1;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#eightSectionDiv1 p {
+  margin-top: 16px;
+}
+
+#eightSectionDiv2 {
+  grid-area: div2;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#eightSectionDiv2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#eightSectionDiv3 {
+  grid-area: div3;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#eightSectionDiv3 div {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 #formasComponent {
   position: absolute;
   height: 83dvh;

@@ -1,0 +1,49 @@
+#seventhSection {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 8%;
+    padding-right: 8%;
+    height: 100%;
+}
+
+#seventhSectionContent {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+#seventhSectionIframe {
+    height: 80dvh;
+    width: 100%;
+}
+
+#seventhSectionPlaceholder {
+    background-image: url('/seventhSection/1.png');
+    background-position: center;
+    background-size: cover;
+    height: 80dvh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#seventhSectionPlaceholderH2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+#seventhSectionPlaceholderP {
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+#seventhSectionPlaceholderIcon {
+    position: absolute;
+    width: 64px;
+    height: 45px;
+    align-self: center;
+    top: 50%;
+    cursor: pointer;
+}
