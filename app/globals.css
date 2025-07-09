@@ -596,6 +596,25 @@
   transition: 0.4s ease-in-out;
 }
 
+#navBarLogo {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+}
+#navBarLogo #divFormas {
+  width: 160px;
+  height: 22px;
+}
+#navBarLogo #divLetras {
+  display: flex;
+  width: 160px;
+  justify-content: center;
+  gap: 25px;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");

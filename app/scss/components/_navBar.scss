@@ -1,0 +1,18 @@
+#navBarLogo {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    #divFormas {
+        width: 160px;
+        height: 22px;
+    }
+    #divLetras {
+        display: flex;
+        width: 160px;
+        justify-content: center;
+        gap: 25px;
+    }
+}
