@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
+    padding: 64px 0;
 }
 
 #sixthSectionH2 {
-    padding: 64px;
+    padding-bottom: 64px;
     font-size: 40px;
     font-weight: 800;
     text-align: center;
@@ -20,11 +20,19 @@
     width: 100%;
 }
 
+.sixthSectionImageFirst {
+    position: absolute;
+    top: 0;
+    object-fit: contain;
+    width: 209px;
+    height: 275px;
+}
+
 .sixthSectionImage {
     position: absolute;
     object-fit: contain;
-    width: 229px;
-    height: 295px;
+    width: 170px;
+    height: 239px;
 }
 
 #sixthSectionP {

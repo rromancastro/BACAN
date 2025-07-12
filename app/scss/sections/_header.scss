@@ -33,23 +33,6 @@
     justify-content: center;
 }
 
-#navUtilitiesAboutContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    #navUtilitiesAboutIcon {
-        width: 19px;
-        height: 20px;
-        object-fit: contain;
-    }
-    #navUtilitiesAboutText {
-        font-weight: 500;
-        font-size: 12px;
-        color: #FFFFFF;
-        position: absolute;
-        top: 2px;
-    }
-}
 
 #navUtilitiesButton {
     background-color: #F5B027;
