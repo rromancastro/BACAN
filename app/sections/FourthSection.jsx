@@ -4,6 +4,28 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export const FourthSection = () => {
+
+    // porcentaje de scroll
+    
+    
+      const [scrollPercentage, setScrollPercentage] = useState(0);
+    
+      useEffect(() => {
+        const handleScroll = () => {
+          const scrollTop = window.scrollY; // Lo que se ha scrolleado
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrolled = (scrollTop / docHeight) * 100;
+          setScrollPercentage(scrolled);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+    
+      useEffect(() => {
+        console.log(scrollPercentage);
+      }, [scrollPercentage])
     
     //logica color de fondo inview
     const { ref, inView } = useInView({
