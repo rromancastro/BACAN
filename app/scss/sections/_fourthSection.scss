@@ -1,7 +1,15 @@
 #fourthSection {
-    background-color: #F8CD78;
-    height: 100dvh;
-    transition: 1.5s;
+  background-color: #F8CD78;
+  height: 280dvh;
+  padding-bottom: 30px;
+  transition: 1.5s;
+}
+
+#fourthSectionSticky {
+  position: sticky;
+  height: 87dvh;
+  transition: 1.5s;
+  top: 13dvh;
 }
 
 #fourthSectionImagenesContainer {
@@ -15,7 +23,7 @@
 
 .fourthSectionImage {
     object-fit: contain;
-    transition: 1s;
+    transition: .5s;
     position: absolute;
     top: 40%;
 }
