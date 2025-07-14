@@ -80,18 +80,18 @@ export const ThirdSection = () => {
             <p style={{fontWeight: '400', fontSize: '12px', color: '#2B440E'}}>Arma tu jugada,<br />las cartas te<br />acompañan.</p>
             <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', right: '60px'}}>
               <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animarCard5 ? 'translateY(80px)' : 'translateY(0px)'}}>
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card511.png" alt="carta" width={200} height={200} />
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card512.png" alt="carta" width={200} height={200} />
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card513.png" alt="carta" width={200} height={200} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card511.png" alt="carta" width={300} height={300} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card512.png" alt="carta" width={300} height={300} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card513.png" alt="carta" width={300} height={300} />
               </div>
               <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animarCard5 ? 'translateY(135px)' : 'translateY(145px)'}}>
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card521.png" alt="carta" width={200} height={200} />
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card522.png" alt="carta" width={200} height={200} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card521.png" alt="carta" width={300} height={300} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card522.png" alt="carta" width={300} height={300} />
               </div>
               <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animarCard5 ? 'translateY(80px)' : 'translateY(200px)'}}>
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card531.png" alt="carta" width={200} height={200} />
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card532.png" alt="carta" width={200} height={200} />
-                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card533.png" alt="carta" width={200} height={200} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card531.png" alt="carta" width={300} height={300} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card532.png" alt="carta" width={300} height={300} />
+                <Image style={{width: '79px', height: '107px', objectFit: 'contain'}} src="/thirdSectionImages/card533.png" alt="carta" width={300} height={300} />
               </div>
             </div>
           </div>
