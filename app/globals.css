@@ -211,7 +211,7 @@
   align-items: center;
   justify-content: center;
   position: sticky;
-  top: 13vh;
+  top: 10vh;
 }
 
 #thirdSectionMobileCarsContainer {
@@ -834,6 +834,7 @@
   #nav {
     padding-right: 16px;
     padding-left: 16px;
+    height: 13dvh;
   }
   #navUtilitiesButtonText {
     font-size: 12px;
