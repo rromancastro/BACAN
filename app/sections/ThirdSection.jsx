@@ -104,7 +104,7 @@ export const ThirdSection = () => {
               <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={14} height={14} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '35%', top: '70%', opacity: mostrarEstrellaNumero == 3 || mostrarEstrellaNumero == 5 ? 1 : 0}}/>
 
             </div>
-            <h3 style={{fontWeight: '600', fontSize: '16px', color: '#2B440E'}}>SUERTE</h3>
+            <h3 style={{fontWeight: '600', fontSize: '16px', color: '#564421'}}>SUERTE</h3>
             <p style={{fontWeight: '400', fontSize: '12px', color: '#564421'}}>Las cartas estan hechadas, puede que te toque algo bueno. No lo desperdicies.</p>
           </div>
         </div>
