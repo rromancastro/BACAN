@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
 
 export const FourthSection = () => {
 
@@ -26,11 +25,6 @@ export const FourthSection = () => {
       useEffect(() => {
         console.log(scrollPercentage);
       }, [scrollPercentage])
-    
-    //logica color de fondo inview
-    const { ref, inView } = useInView({
-        threshold: .2, 
-    });
 
     function interpolar(minimo, maximo, posInicio, posFin) {
   if (scrollPercentage <= minimo) return posInicio;
@@ -39,7 +33,7 @@ export const FourthSection = () => {
 }
     
     return (
-        <section ref={ref} id="fourthSection" style={{backgroundColor: inView ? '#F8CD78' : '#FFFFFF'}}>
+        <section id="fourthSection">
           <div id="fourthSectionSticky">
               <div id="fourthSectionImagenesContainer">
                   <Image style={{top: `${interpolar(35, 36, 40, 8.5)}%`, left: `${interpolar(35, 36, 40.5, 23.68)}%`}} className="fourthSectionImage" id="fourthSectionImage1" src="/fourthSection/1.png" alt="imagen1" width={258} height={200} />
