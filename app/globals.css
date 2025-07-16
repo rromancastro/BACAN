@@ -4,59 +4,6 @@
   background-color: #FFFFFF;
 }
 
-#nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 17dvh;
-  width: 100%;
-  padding-right: 64px;
-  padding-left: 64px;
-  position: fixed;
-  background-color: #FFFFFF;
-  z-index: 150;
-}
-
-#navLogo {
-  width: 160px;
-  height: 44px;
-  object-fit: contain;
-}
-
-#navUtilities {
-  height: 108px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-}
-
-#navUtilitiesButton {
-  background-color: #F5B027;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-decoration: none;
-  border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
-#navUtilitiesButton:hover {
-  background-color: #F8CD78;
-}
-
-#navUtilitiesButtonText {
-  font-weight: 500;
-  font-size: 14px;
-  color: #000000;
-}
-
 #headerContent {
   display: "flex";
   justify-content: "center";
@@ -94,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 7.5%;
 }
 
 #secondSectionH2 {
@@ -114,7 +61,7 @@
 }
 
 #secondSectionImage {
-  width: 300px;
+  width: 25dvw;
   height: 100%;
   object-fit: contain;
   object-position: center;
@@ -341,6 +288,9 @@
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#fifthSectionA:hover {
+  background-color: #B7E1FF;
 }
 
 #sixthSection {
@@ -618,6 +568,52 @@
   width: 160px;
   justify-content: center;
   gap: 25px;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 17dvh;
+  width: 100%;
+  padding-right: 64px;
+  padding-left: 64px;
+  position: fixed;
+  z-index: 150;
+}
+
+#navUtilities {
+  height: 108px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+#navUtilitiesButton {
+  background-color: #F5B027;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+#navUtilitiesButton:hover {
+  background-color: #F8CD78;
+}
+
+#navUtilitiesButtonText {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
 }
 
 @font-face {

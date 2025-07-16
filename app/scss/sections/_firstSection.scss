@@ -1,0 +1,35 @@
+#header {
+    width: 100dvw;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+#headerContent {
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
+    width: 100%;
+    height: 83dvh;
+    padding-top: 17dvh;
+}
+
+#headerContentCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 83dvh;
+    justify-content: center;
+    gap: 24px;
+}
+
+#headerCorona {
+    width: 24px;
+    height: 25px;
+}
+
+#headerH1 {
+    color: #000000;
+    font-weight: 800;
+    text-align: center;
+    font-size: 48px;
+}

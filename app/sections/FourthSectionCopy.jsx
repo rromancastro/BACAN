@@ -30,7 +30,6 @@ export const FourthSection = () => {
     //logica color de fondo inview
     const { ref, inView } = useInView({
         threshold: .7, 
-        triggerOnce: true,
     });
 
     //logica animaciones cards
