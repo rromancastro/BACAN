@@ -53,3 +53,19 @@
         background-color: #B7E1FF;
     }
 }
+
+@media(max-width: 835px) {
+    #fifthSection {
+        padding: 64px 40px;
+    }
+
+    #fifthSectionCard {
+        height: 80dvh;
+        width: 100%;
+    }
+
+    .fifthSectionImage {
+        object-position: bottom left;
+    }
+
+}

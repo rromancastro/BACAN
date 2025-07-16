@@ -2,7 +2,7 @@
 
 import { useInView } from "react-intersection-observer";
 import { NavBar } from "./components";
-import { FifthSection, FirstSection, SecondSection, ThirdSection, SixthSection, SeventhSection, EigthSection} from "./sections";
+import { FifthSection, FirstSection, SecondSection, ThirdSection, SixthSection, SeventhSection, EigthSection, ThirdSectionMobile} from "./sections";
 import { FourthSection } from "./sections/FourthSection";
 
 
@@ -22,6 +22,7 @@ export default function Home() {
       <SecondSection />
 
       <ThirdSection />
+      <ThirdSectionMobile />
 
       <div ref={ref}>
         <FourthSection />

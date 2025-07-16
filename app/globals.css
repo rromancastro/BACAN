@@ -1,6 +1,6 @@
 #header {
   width: 100dvw;
-  height: 100%;
+  height: 85dvh;
   background-color: #FFFFFF;
 }
 
@@ -34,6 +34,12 @@
   font-size: 48px;
 }
 
+@media (max-width: 835px) {
+  #header {
+    height: 100vh;
+    margin-bottom: 64px;
+  }
+}
 #secondSection {
   width: 100%;
   padding: 64px 0px;
@@ -58,11 +64,12 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
+  width: 20%;
 }
 
 #secondSectionImage {
-  height: 70dvh;
-  width: 100%;
+  height: 379px;
+  width: auto;
   object-fit: contain;
   object-position: center;
   border-radius: 24px;
@@ -120,17 +127,38 @@
   transition: 1.5s;
 }
 
-.flip-container {
-  display: inline-block;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  perspective: 1000px;
+#secondSectionH2Mobile {
+  display: none;
+  font-size: 28px;
+  text-align: center;
+  transition: 1.5s;
 }
 
-.flip-container.flipped {
-  transform: rotateY(180deg);
+#secondSectionButtonContainerMobile {
+  display: none;
 }
 
+@media (max-width: 835px) {
+  #secondSection {
+    padding: 64px 16px;
+    height: 100%;
+    flex-direction: column;
+    gap: 48px;
+  }
+  #secondSectionH2Mobile {
+    font-size: 28px;
+    text-align: center;
+    transition: 1.5s;
+    font-weight: 800;
+    display: block;
+  }
+  #secondSectionH2 {
+    display: none;
+  }
+  #secondSectionP {
+    text-align: center;
+  }
+}
 #thirdSection {
   display: flex;
   flex-direction: column;
@@ -166,6 +194,62 @@
   transition: 0.5s;
 }
 
+#thirdSectionMobile {
+  width: 100%;
+  height: 370vh;
+  display: none;
+  padding: 64px 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#thirdSectionMobileSticky {
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 13vh;
+}
+
+#thirdSectionMobileCarsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thirdSectionMobileCard {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  padding: 32px 24px;
+  gap: 16px;
+  border-radius: 16px;
+}
+.thirdSectionMobileCard h3 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.thirdSectionMobileCard p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@media (max-width: 830px) {
+  #thirdSection {
+    display: none;
+  }
+  #thirdSectionMobile {
+    display: flex;
+  }
+}
 #fourthSection {
   height: 280dvh;
   padding-bottom: 30px;
@@ -250,6 +334,80 @@
   transition: 1s;
 }
 
+#fourthSectionMobile {
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  gap: 64px;
+}
+
+#fourthSectionMobileImagenesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.fourthSectionImageMobile {
+  object-fit: contain;
+}
+
+#fourthSectionMobile {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.fourthSectionMarquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fourthSectionMarqueeTrack {
+  --marquee-duration: 25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  animation: fourthSectionMarqueeScroll var(--marquee-duration) linear infinite;
+  will-change: transform;
+}
+
+.fourthSectionImageMobile {
+  flex: 0 0 auto;
+  height: auto;
+  border-radius: 12px;
+}
+
+@keyframes fourthSectionMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fourthSectionMarqueeTrack {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 835px) {
+  #fourthSectionSticky {
+    display: none;
+  }
+  #fourthSection {
+    height: 100vh;
+  }
+  #fourthSectionMobile {
+    display: flex;
+  }
+  #fourthSectionH2 {
+    font-size: 28px;
+  }
+}
 #fifthSection {
   padding-top: 128px;
   padding-bottom: 64px;
@@ -306,6 +464,18 @@
   background-color: #B7E1FF;
 }
 
+@media (max-width: 835px) {
+  #fifthSection {
+    padding: 64px 40px;
+  }
+  #fifthSectionCard {
+    height: 80dvh;
+    width: 100%;
+  }
+  .fifthSectionImage {
+    object-position: bottom left;
+  }
+}
 #sixthSection {
   height: 100%;
   display: flex;
@@ -353,8 +523,8 @@
 #seventhSection {
   padding-top: 64px;
   padding-bottom: 128px;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 40px;
+  padding-right: 40px;
   height: 100%;
 }
 
@@ -403,7 +573,7 @@
 #eigthSection {
   background-color: #7ABDEC;
   width: 100%;
-  height: 87dvh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,7 +593,7 @@
 }
 
 #eigthSectionContent {
-  height: 65dvh;
+  height: 75dvh;
   width: 55%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -475,6 +645,16 @@
   gap: 16px;
 }
 
+@media (max-width: 835px) {
+  #eigthSection {
+    padding: 0 55px;
+    display: none;
+  }
+  #eigthSectionContent {
+    height: 65dvh;
+    width: 100%;
+  }
+}
 #formasComponent {
   position: absolute;
   height: 83dvh;
@@ -564,6 +744,27 @@
   transition: 0.4s ease-in-out;
 }
 
+@media (max-width: 835px) {
+  #formasComponent {
+    display: none;
+  }
+}
+#formasMobileComponent {
+  position: absolute;
+  height: 83dvh;
+  width: 100%;
+  z-index: 50;
+}
+
+.formaMobile {
+  transition: 1s ease-in-out;
+}
+
+@media (min-width: 836px) {
+  #formasMobileComponent {
+    display: none;
+  }
+}
 #navBarLogo {
   display: flex;
   flex-direction: column;
@@ -629,6 +830,32 @@
   color: #000000;
 }
 
+@media (max-width: 830px) {
+  #nav {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  #navUtilitiesButtonText {
+    font-size: 12px;
+  }
+  #navBarLogo {
+    width: 160px;
+    height: 30px;
+  }
+  #navBarLogo #divFormas {
+    width: 160px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #navBarLogo #divLetras {
+    display: flex;
+    width: 160px;
+    justify-content: center;
+    gap: 25px;
+  }
+}
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");

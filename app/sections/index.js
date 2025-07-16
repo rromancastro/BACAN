@@ -1,6 +1,7 @@
 export * from './FirstSection';
 export * from './SecondSection';
 export * from './ThirdSection';
+export * from './ThirdSectionMobile';
 export * from './FourthSection';
 export * from './FifthSection';
 export * from './SixthSection';

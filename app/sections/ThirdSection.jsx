@@ -50,8 +50,8 @@ export const ThirdSection = () => {
           <div onMouseOver={() => setCard1Zoom(1.5)} onMouseLeave={() => {setCard1Zoom(1)}} style={{gap: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gridArea: 'area1', backgroundColor: '#F8CD78', borderRadius: '16px', padding: '24px'}}>
             <h3 style={{fontWeight: '600',fontSize: '16px', color: '#564421'}}>VELOCIDAD</h3>
             <p style={{fontWeight: '400', fontSize: '12px', color: '#564421'}}>Si eres un tortuga, despierta! Aquí no te esperan para cruzar la calle.</p>
-            <div style={{position: 'absolute', top: 90, right: 25,height: '213px', width: '268px', objectFit: 'contain', overflow: 'hidden', borderRadius: '16px', transform: 'rotate(-8deg)'}}>
-                <Image className="card1Image" src="/thirdSectionImages/card1.png" alt="mazo" width={500} height={500} style={{transition: `.5s`,position: 'absolute', height: '213px', width: '268px', objectFit: 'cover', transform: `scale(${card1Zoom})`}}/>
+            <div style={{position: 'absolute', top: 90, right: 25,height: '203px', width: '218px', objectFit: 'contain', overflow: 'hidden', borderRadius: '16px', transform: 'rotate(-8deg)'}}>
+                <Image className="card1Image" src="/thirdSectionImages/card1.png" alt="mazo" width={500} height={500} style={{transition: `.5s`,position: 'absolute', height: '203px', width: '218px', objectFit: 'cover', transform: `scale(${card1Zoom})`}}/>
             </div>
           </div>
 
@@ -104,7 +104,7 @@ export const ThirdSection = () => {
               <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={14} height={14} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '35%', top: '70%', opacity: mostrarEstrellaNumero == 3 || mostrarEstrellaNumero == 5 ? 1 : 0}}/>
 
             </div>
-            <h3 style={{fontWeight: '600', fontSize: '16px', color: '#564421'}}>SUERTE</h3>
+            <h3 style={{fontWeight: '600', fontSize: '16px', color: '#2B440E'}}>SUERTE</h3>
             <p style={{fontWeight: '400', fontSize: '12px', color: '#564421'}}>Las cartas estan hechadas, puede que te toque algo bueno. No lo desperdicies.</p>
           </div>
         </div>

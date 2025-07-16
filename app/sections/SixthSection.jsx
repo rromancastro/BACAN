@@ -1,13 +1,38 @@
 "use client";
 import Image from "next/image"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export const SixthSection = () => {
 
     const [animCards, setAnimCards] = useState(false);
 
+    //logica se abren solas en scroll
+    const [width, setWidth] = useState(0);
+    
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const { ref, inView } = useInView({
+        threshold: .7, 
+    });
+
+    useEffect(() => {
+        if (inView && width <= 835) {
+            setAnimCards(true);
+        } else {
+            setAnimCards(false);
+        }
+    }, [inView])
+
     return (
-        <section id="sixthSection">
+        <section ref={ref} id="sixthSection">
             <h2 id="sixthSectionH2">LAS REGLAS</h2>
             <div onMouseOver={() => setAnimCards(true)} onMouseLeave={() => setAnimCards(false)} id="sixthSectionImagesContainer">
                 <Image style={{zIndex: 7}} className="sixthSectionImageFirst" src="/sixthSection/1.png" alt="Sixth Section Image" width={500} height={500} />

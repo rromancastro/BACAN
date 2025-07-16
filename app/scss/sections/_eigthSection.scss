@@ -1,7 +1,7 @@
 #eigthSection {
     background-color: #7ABDEC;
     width: 100%;
-    height: 87dvh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
 }
 
 #eigthSectionContent {
-    height: 65dvh;
+    height: 75dvh;
     width: 55%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -72,5 +72,17 @@
         display: flex;
         justify-content: center;
         gap: 16px;
+    }
+}
+
+@media(max-width: 835px) {
+    #eigthSection {
+        padding: 0 55px;
+        display: none;
+    }
+
+    #eigthSectionContent {
+        height: 65dvh;
+        width: 100%;
     }
 }

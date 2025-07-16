@@ -3,6 +3,19 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export const FourthSection = () => {
+    //mobile
+    
+const imgs = [
+  "/fourthSection/5.png",
+  "/fourthSection/1.png",
+  "/fourthSection/3.png",
+  "/fourthSection/6.png",
+  "/fourthSection/7.png",
+  "/fourthSection/2.png",
+  "/fourthSection/4.png",
+];
+
+
 
     // porcentaje de scroll
     
@@ -21,16 +34,12 @@ export const FourthSection = () => {
         
         return () => window.removeEventListener("scroll", handleScroll).toFixed(1);
       }, []);
-    
-      useEffect(() => {
-        console.log(scrollPercentage);
-      }, [scrollPercentage])
 
     function interpolar(minimo, maximo, posInicio, posFin) {
-  if (scrollPercentage <= minimo) return posInicio;
-  if (scrollPercentage >= maximo) return posFin;
-  return posInicio + ((scrollPercentage - minimo) * (posFin - posInicio)) / (maximo - minimo);
-}
+      if (scrollPercentage <= minimo) return posInicio;
+      if (scrollPercentage >= maximo) return posFin;
+      return posInicio + ((scrollPercentage - minimo) * (posFin - posInicio)) / (maximo - minimo);
+    }
     
     return (
         <section id="fourthSection">
@@ -49,6 +58,46 @@ export const FourthSection = () => {
                   <p id="fourthSectionP" style={{opacity: `${interpolar(50, 51, 0, 100)}%`}}>Esta gente esta relamente loca, mira lo<br />que dicen. No nos hacemos responsables<br />por estos comentarios. Tu veras...</p>
               </div>
           </div>
+          <div id="fourthSectionMobile">
+      <h2 id="fourthSectionH2">
+        LO QUE<br />DICE LA PEÑA
+      </h2>
+
+      {/* Contenedor marquee */}
+      <div className="fourthSectionMarquee">
+        <div className="fourthSectionMarqueeTrack">
+          {/* 1er set */}
+          {imgs.map((src) => (
+            <Image
+              key={`a-${src}`}
+              src={src}
+              className="fourthSectionImageMobile"
+              alt="testimonio"
+              width={258}
+              height={200}
+              priority={false}
+            />
+          ))}
+          {/* 2do set duplicado para loop */}
+          {imgs.map((src) => (
+            <Image
+              key={`b-${src}`}
+              src={src}
+              className="fourthSectionImageMobile"
+              alt="testimonio duplicado"
+              width={258}
+              height={200}
+              aria-hidden="true" // accesibilidad: duplicado no anunciado
+              priority={false}
+            />
+          ))}
+        </div>
+      </div>
+
+      <p id="fourthSectionP">
+        Esta gente está realmente<br />loca, mira lo que dicen. No nos<br />hacemos responsables por<br />estos comentarios. Tu verás...
+      </p>
+    </div>
         </section>
     )
 }

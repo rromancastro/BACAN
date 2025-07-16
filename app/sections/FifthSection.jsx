@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const FifthSection = () => {
     const [mostrarImagen, setMostrarImagen] = useState(1);
@@ -15,13 +15,31 @@ export const FifthSection = () => {
     };
 
     const handleMouseLeave = () => {
-        if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
+        if (width > 835) {
+            if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
+            }
         }
     };
 
+    //logica autoplay 
+    const [width, setWidth] = useState(0);
     
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (width <= 835) {
+            handleMouseEnter();
+        }
+    }, [width])
 
     return (
         <section id="fifthSection">

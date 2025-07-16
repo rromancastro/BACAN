@@ -82,3 +82,90 @@
     text-align: center;
     transition: 1s;
 }
+
+//PROPS MOBILE
+
+
+
+#fourthSectionMobile {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    gap: 64px;
+}
+
+#fourthSectionMobileImagenesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.fourthSectionImageMobile {
+    object-fit: contain;
+}
+
+#fourthSectionMobile {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.fourthSectionMarquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fourthSectionMarqueeTrack {
+  --marquee-duration: 25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  animation: fourthSectionMarqueeScroll var(--marquee-duration) linear infinite;
+  will-change: transform;
+}
+
+.fourthSectionImageMobile {
+  flex: 0 0 auto;
+  height: auto;
+  border-radius: 12px;
+}
+
+@keyframes fourthSectionMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .fourthSectionMarqueeTrack {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+
+
+@media(max-width: 835px) {
+    #fourthSectionSticky {
+        display: none;
+    }
+
+    #fourthSection {
+        height: 100vh;
+    }
+
+    #fourthSectionMobile {
+        display: flex;
+    }
+
+    #fourthSectionH2 {
+        font-size: 28px;
+    }
+}
