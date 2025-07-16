@@ -14,11 +14,18 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "react-card-flip": "^1.2.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.3.4"
+  },
+  "overrides": {
+    "react-card-flip": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0"
+    }
   }
 }
