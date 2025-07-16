@@ -12,21 +12,27 @@ export const ThirdSectionMobile = () => {
       const [scrollPercentage, setScrollPercentage] = useState(0);
     
       useEffect(() => {
+        let ticking = false;
+
         const handleScroll = () => {
-          const scrollTop = window.scrollY;
-          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          const scrolled = (scrollTop / docHeight) * 100;
-          setScrollPercentage(scrolled);
+            if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = (scrollTop / docHeight) * 100;
+                setScrollPercentage(prev => {
+                    const next = parseFloat(scrolled.toFixed(1));
+                    return prev !== next ? next : prev;
+                });
+                ticking = false;
+            });
+            ticking = true;
+            }
         };
-    
+
         window.addEventListener("scroll", handleScroll);
-        
-        return () => window.removeEventListener("scroll", handleScroll).toFixed(1);
-      }, []);
-    
-      useEffect(() => {
-        console.log(scrollPercentage);
-      }, [scrollPercentage])
+        return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
 
     function interpolar(minimo, maximo, posInicio, posFin) {
       if (scrollPercentage <= minimo) return posInicio;
