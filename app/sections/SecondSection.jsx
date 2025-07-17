@@ -8,6 +8,17 @@ import ReactCardFlip from "react-card-flip";
 
 export const SecondSection = () => {
 
+  const [width, setWidth] = useState(0);
+        
+        useEffect(() => {
+            const handleResize = () => setWidth(window.innerWidth);
+    
+            handleResize();
+            window.addEventListener("resize", handleResize);
+    
+            return () => window.removeEventListener("resize", handleResize);
+        }, []);
+
   //preload imagenes
     useEffect(() => {
         const sources = [
@@ -26,9 +37,11 @@ export const SecondSection = () => {
         }
       }, []);
 
+      
+
   //logica animacion entrada textos
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: width >= 835 ? 1 : 0.1,
     triggerOnce: true,
   });
 

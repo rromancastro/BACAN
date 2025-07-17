@@ -88,11 +88,7 @@
 }
 
 
-@media(max-width: 835px) {
-    #formasComponent {
-        display: none;
-    }
-}
+
 
 //mobile
 
@@ -110,6 +106,21 @@
 
 @media(min-width: 836px) {
     #formasMobileComponent {
+        display: none;
+    }
+}
+
+@media(max-width: 835px) {
+    #formasComponent {
+        display: none;
+    }
+    #forma5 {
+        display: none;
+    }
+    #forma8 {
+        display: none;
+    }
+    #forma13 {
         display: none;
     }
 }
