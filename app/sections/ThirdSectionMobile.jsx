@@ -63,7 +63,7 @@ export const ThirdSectionMobile = () => {
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
                         <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '100%', height: '83%', objectFit: 'cover'}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{backgroundColor: '#B1D18D', top: scrollPercentage < 46 ? interpolar(16, 45, 550, 460) : interpolar(46, 56, 460, 0)}}>
+                    <div className="thirdSectionMobileCard" style={{backgroundColor: '#B1D18D', top: scrollPercentage < 46 ? interpolar(16, 46, 550, 460) : interpolar(46, 56, 460, 0)}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
@@ -84,11 +84,17 @@ export const ThirdSectionMobile = () => {
                           </div>
                         </div>
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s', backgroundColor: '#F8CD78', top: scrollPercentage < 56 ? interpolar(16, 56, 580, 460) : interpolar(56, 66, 460, 0)}}>
+                    <div className="thirdSectionMobileCard" style={{backgroundColor: '#F8CD78', top: scrollPercentage < 56 ? interpolar(16, 56, 580, 460) : interpolar(56, 66, 460, 0)}}>
                         <h3 style={{color: '#564421'}}>SUERTE</h3>
                         <p style={{color: '#564421'}}>Las cartas estan hechadas, puede que te toque algo bueno. No lo desperdicies.</p>
-                        <Image src={'/thirdSectionImages/card6corona.png'} alt="corona" width={140} height={170} style={{objectFit: 'contain', width: '100%', marginTop: '80px'}}/>            
+                        <div style={{display: 'flex'}}>
+                            <Image src={'/thirdSectionImages/card6corona.png'} alt="corona" width={140} height={170} style={{objectFit: 'contain', width: '100%', marginTop: '80px'}}/>
+                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={50} height={50} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '30%', top: '45%', opacity: scrollPercentage >= 62 && scrollPercentage <= 65 ? 1 : 0}}/>
+                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={50} height={50} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', left: '26%', top: '65%', opacity: scrollPercentage >= 64 && scrollPercentage <= 66 ? 1 : 0}}/>
+                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={34} height={34} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '30%', top: '70%', opacity: scrollPercentage >= 60 && scrollPercentage <= 64 ? 1 : 0}}/>
+                        </div>             
                     </div>
+                    
                 </div>
             </div>
         </section>
