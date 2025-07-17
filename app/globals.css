@@ -250,6 +250,9 @@
   #thirdSectionMobile {
     display: flex;
   }
+  #thirdSectionH2 {
+    font-size: 28px;
+  }
 }
 #fourthSection {
   height: 280dvh;

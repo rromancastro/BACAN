@@ -51,8 +51,8 @@ export const ThirdSectionMobile = () => {
                     <div className="thirdSectionMobileCard" style={{backgroundColor: '#FF8283', top: scrollPercentage < 16 ? interpolar(16, 16, 460, 460) : interpolar(16, 26, 460, 0) }}>
                         <h3 style={{color: '#5A2020'}}>AGILIDAD</h3>
                         <p style={{color: '#5A2020'}}>Las cartas especiales te pueden dar una gran ventaja sobre tus competidores, dales caña robando sus cartas!</p>
-                        <Image src="/thirdSectionImages/card2_2.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '150px', bottom: '50px', transform: `rotate(${interpolar(16, 26, -40, 8)}deg)`}} alt="mazo" width={500} height={500} />
-                        <Image src="/thirdSectionImages/card2_1.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '50px', bottom: '55px', transform: `rotate(${interpolar(16, 26, -40, 8)}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_2.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '35%', bottom: '50px', transform: `rotate(${interpolar(16, 26, -40, 8)}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_1.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '10%', bottom: '55px', transform: `rotate(${interpolar(16, 26, -40, 8)}deg)`}} alt="mazo" width={500} height={500} />
                     </div>
                     <div className="thirdSectionMobileCard" style={{backgroundColor: '#7ABDEC', top: scrollPercentage < 26 ? interpolar(16, 26, 490, 460) : interpolar(26, 36, 460, 0)}}>
                         <h3 style={{color: '#225274'}}>MEMORIA</h3>

@@ -53,6 +53,8 @@ export const SecondSection = () => {
       const[currentImage, setCurrentImage] = useState(1);
 
       const [showingFront, setShowingFront] = useState(true);
+
+      const [estaAnimando, setEstaAnimando] = useState(false);
     
       const secondSectionArray = [
         "Recuerda",
@@ -63,12 +65,14 @@ export const SecondSection = () => {
       ]
     
       const handleSumar = () => {
-        if (secondSectionButtonText < 4) {
+        if (secondSectionButtonText < 4 && !estaAnimando) {
+          setEstaAnimando(true);
           setSecondSectionButtonText(secondSectionButtonText + 1);
           setIsFlipped(!isFlipped);
           setCurrentImage(currentImage + 1);
           setShowingFront(!showingFront);
           setTimeout(() => {
+            setEstaAnimando(false);
             setCurrentImageFront(currentImage === 1 ? 3 : currentImage === 2 ? 3 : currentImage === 3 ? 5 : 5);
             setCurrentImageBack(currentImage === 1 ? 2 : currentImage === 3 ? 4 : 4);
           }, 600)
@@ -76,12 +80,14 @@ export const SecondSection = () => {
       }
     
       const handleRestar = () => {
-        if (secondSectionButtonText > 0) {
+        if (secondSectionButtonText > 0 && !estaAnimando) {
+          setEstaAnimando(true);
           setSecondSectionButtonText(secondSectionButtonText - 1);
           setIsFlipped(!isFlipped);
           setCurrentImage(currentImage - 1);
           setShowingFront(!showingFront);
           setTimeout(() => {
+            setEstaAnimando(false);
             setCurrentImageFront(currentImage === 5 ? 3 : currentImage === 4 ? 3 : 1);
             setCurrentImageBack(currentImage === 3 ? 2 : currentImage === 5 ? 4 : currentImage === 2 ? 2 : 2);
           }, 600)
