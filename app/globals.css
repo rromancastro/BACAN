@@ -114,6 +114,7 @@
   border-radius: 13px;
   transition: 0.5s;
   cursor: pointer;
+  color: #000000;
 }
 .secondSectionButtonIcon:hover {
   background-color: #7ABDEC;
