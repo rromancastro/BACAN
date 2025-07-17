@@ -232,6 +232,7 @@
   padding: 32px 24px;
   gap: 16px;
   border-radius: 16px;
+  will-change: transform, top, opacity;
 }
 .thirdSectionMobileCard h3 {
   font-weight: 600;
