@@ -67,17 +67,17 @@ export const ThirdSectionMobile = () => {
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: `translateY(${interpolar(46, 56, 190, 130)}px)` }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: scrollPercentage <= 55 ? 'translateY(250px)' : 'translateY(120px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card511.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card512.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card513.png" alt="carta" width={300} height={300} />
                           </div>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: `translateY(${interpolar(46, 56, 40, 165)}px)`}}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: scrollPercentage <= 55 ? 'translateY(80px)' : 'translateY(160px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card523.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card521.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card522.png" alt="carta" width={300} height={300} />
                           </div>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: `translateY(${interpolar(46, 56, 390, 90)}px)` }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: scrollPercentage <= 55 ? 'translateY(200px)' : 'translateY(90px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card531.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card532.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card533.png" alt="carta" width={300} height={300} />
