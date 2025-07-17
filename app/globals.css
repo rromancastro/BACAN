@@ -867,11 +867,46 @@
   #formasComponent {
     display: none;
   }
+  #forma1 {
+    display: none;
+  }
+  #forma2 {
+    display: none;
+  }
+  #forma3 {
+    top: 75%;
+    left: 30%;
+  }
+  #forma3 {
+    top: 75%;
+    left: 30%;
+  }
   #forma5 {
+    display: none;
+  }
+  #forma6 {
+    top: 40.86%;
+    left: 10.65%;
+  }
+  #forma7 {
     display: none;
   }
   #forma8 {
     display: none;
+  }
+  #forma9 {
+    display: none;
+  }
+  #forma10 {
+    top: 27%;
+    left: 75%;
+  }
+  #forma11 {
+    display: none;
+  }
+  #forma12 {
+    top: 60%;
+    left: 85%;
   }
   #forma13 {
     display: none;
