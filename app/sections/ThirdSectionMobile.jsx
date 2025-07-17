@@ -1,40 +1,35 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const ThirdSectionMobile = () => {
 
     // porcentaje de scroll
     
-    const containerRef = useRef(null);
-    const [scrollPercentage, setScrollPercentage] = useState(0);
+    
+      const [scrollPercentage, setScrollPercentage] = useState(0);
     
       useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
-
         let ticking = false;
 
         const handleScroll = () => {
             if (!ticking) {
             window.requestAnimationFrame(() => {
-                const scrollTop = container.scrollTop;
-                const scrollHeight = container.scrollHeight - container.clientHeight;
-                const percent = (scrollTop / scrollHeight) * 100;
-
-                setScrollPercentage((prev) => {
-                const next = parseFloat(percent.toFixed(1));
-                return prev !== next ? next : prev;
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = (scrollTop / docHeight) * 100;
+                setScrollPercentage(prev => {
+                    const next = parseFloat(scrolled.toFixed(1));
+                    return prev !== next ? next : prev;
                 });
-
                 ticking = false;
             });
             ticking = true;
             }
         };
 
-        container.addEventListener("scroll", handleScroll);
-        return () => container.removeEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
         }, []);
 
     function interpolar(minimo, maximo, posInicio, posFin) {
@@ -44,8 +39,8 @@ export const ThirdSectionMobile = () => {
     }
 
     return (
-        <section id="thirdSectionMobile" ref={containerRef}>
-            <div id="thirdSectionMobileSticky" >
+        <section id="thirdSectionMobile">
+            <div id="thirdSectionMobileSticky">
                 <h2 id="thirdSectionH2">APTO PARA<br />COMPETIDORES<br />NATOS</h2>
                 <div id="thirdSectionMobileCarsContainer">
                     <div className="thirdSectionMobileCard" style={{backgroundColor: '#F8CD78', top: '0px'}}>
@@ -68,7 +63,7 @@ export const ThirdSectionMobile = () => {
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
                         <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '100%', height: '83%', objectFit: 'cover'}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{backgroundColor: '#B1D18D', top: scrollPercentage < 46 ? interpolar(16, 46, 550, 460) : interpolar(46, 56, 460, 0)}}>
+                    <div className="thirdSectionMobileCard" style={{backgroundColor: '#B1D18D', top: scrollPercentage < 46 ? interpolar(16, 45, 550, 460) : interpolar(46, 56, 460, 0)}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
