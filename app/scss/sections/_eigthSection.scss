@@ -77,12 +77,22 @@
 
 @media(max-width: 835px) {
     #eigthSection {
-        padding: 0 55px;
-        display: none;
+        padding: 0 16px;
     }
 
     #eigthSectionContent {
-        height: 65dvh;
+        height: 85dvh;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #eightSectionDiv1 {
+        order: 3;
+        gap: 24px;
+    }
+
+    #eightSectionDiv2 {
+        gap: 8;
     }
 }

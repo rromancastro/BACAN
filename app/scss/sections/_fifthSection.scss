@@ -69,3 +69,24 @@
     }
 
 }
+
+@media(max-width: 480px) {
+    #fifthSection {
+        padding: 64px 16px;
+    }
+    #fifthSectionH2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    #fifthSectionCard {
+        height: 612px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .fifthSectionImage {
+        object-position: center;
+    }
+}  
