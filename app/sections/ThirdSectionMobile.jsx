@@ -48,22 +48,22 @@ export const ThirdSectionMobile = () => {
                         <p style={{color: '#564421'}}>Si eres un tortuga, despierta! Aquí no te esperan para cruzar la calle.</p>
                         <Image src="/thirdSectionImages/card1.png" alt="mazo" style={{borderRadius: '16px', width: '80%', height: '60%', transform: 'rotate(-8deg)', alignSelf: 'center', marginTop: '46px'}} width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out', backgroundColor: '#FF8283', top: scrollPercentage < 18 ? 460 : 0 }}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out', backgroundColor: '#FF8283', top: scrollPercentage < 20 ? 460 : 0 }}>
                         <h3 style={{color: '#5A2020'}}>AGILIDAD</h3>
                         <p style={{color: '#5A2020'}}>Las cartas especiales te pueden dar una gran ventaja sobre tus competidores, dales caña robando sus cartas!</p>
                         <Image src="/thirdSectionImages/card2_2.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '35%', bottom: '50px', transform: `rotate(${scrollPercentage < 17 ? -40 : 8}deg)`}} alt="mazo" width={500} height={500} />
                         <Image src="/thirdSectionImages/card2_1.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '10%', bottom: '55px', transform: `rotate(${scrollPercentage < 17 ? -40 : 8}deg)`}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', top: scrollPercentage < 25 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', top: scrollPercentage < 30 ? 460 : 0}}>
                         <h3 style={{color: '#225274'}}>MEMORIA</h3>
                         <p style={{color: '#225274'}}>No olvides tu cartas, porque no podras verlas así de fácil.</p>
                         <Image src={`/thirdSectionImages/card3_${scrollPercentage < 30 ? 2 : scrollPercentage < 32 ? 1 : scrollPercentage < 35 ? 2 : scrollPercentage < 36 ? 1 : 1 }.png`} alt="mazo" style={{width: '100%', height: '100%', objectFit: 'contain',}} width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', top: scrollPercentage < 32 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', top: scrollPercentage < 40 ? 460 : 0}}>
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
                         <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '100%', height: '83%', objectFit: 'cover'}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', top: scrollPercentage < 39 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', top: scrollPercentage < 50 ? 460 : 0}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
@@ -84,7 +84,7 @@ export const ThirdSectionMobile = () => {
                           </div>
                         </div>
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#F8CD78', top: scrollPercentage < 46 ? interpolar(16, 56, 580, 460) : interpolar(56, 66, 460, 0)}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#F8CD78', top: scrollPercentage < 60 ? 460 : 0}}>
                         <h3 style={{color: '#564421'}}>SUERTE</h3>
                         <p style={{color: '#564421'}}>Las cartas estan hechadas, puede que te toque algo bueno. No lo desperdicies.</p>
                         <div style={{display: 'flex'}}>
