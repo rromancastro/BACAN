@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 export const ThirdSectionMobile = () => {
 
     // porcentaje de scroll
-    
-    
       const [scrollPercentage, setScrollPercentage] = useState(0);
     
       useEffect(() => {
@@ -38,6 +36,59 @@ export const ThirdSectionMobile = () => {
       return posInicio + ((scrollPercentage - minimo) * (posFin - posInicio)) / (maximo - minimo);
     }
 
+    
+    //anim cards
+
+    const [animCard, setAnimCard] = useState(1);
+
+    const [animCard3Step, setAnimCard3Step] = useState(1);
+    const [animCard5Step, setAnimCard5Step] = useState(0);
+
+
+    useEffect(() => {
+        if (scrollPercentage >= 20 && scrollPercentage < 22) {
+            setTimeout(() => {
+                setAnimCard(2);  
+            }, 800);
+        }
+        if (scrollPercentage >= 30 && scrollPercentage < 32) {  
+            setTimeout(() => {
+                setAnimCard(3);  
+                setAnimCard3Step(2);
+            }, 800);
+            setTimeout(() => {
+                setAnimCard3Step(1);
+            }, 1400);
+            setTimeout(() => {
+                setAnimCard3Step(2);
+            }, 2000);
+            setTimeout(() => {
+                setAnimCard3Step(1);
+            }, 2600);
+        }
+        if (scrollPercentage >= 50 && scrollPercentage < 52) {
+            setTimeout(() => {
+                setAnimCard(4);  
+            }, 800);
+        }
+        if (scrollPercentage >= 60 && scrollPercentage < 62) {
+            setTimeout(() => {
+                setAnimCard(5);  
+                setAnimCard5Step(1);
+            }, 800);
+            setTimeout(() => {
+                setAnimCard5Step(2);
+            }, 1200);
+            setTimeout(() => {
+                setAnimCard5Step(3);
+            }, 1600);
+            setTimeout(() => {
+                setAnimCard5Step(4);
+            }, 2000);
+        }
+    }, [scrollPercentage]);
+
+
     return (
         <section  onScrollCapture={()=>console.log('hola')} id="thirdSectionMobile">
             <div id="thirdSectionMobileSticky">
@@ -51,47 +102,47 @@ export const ThirdSectionMobile = () => {
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out', backgroundColor: '#FF8283', top: scrollPercentage < 20 ? 460 : 0 }}>
                         <h3 style={{color: '#5A2020'}}>AGILIDAD</h3>
                         <p style={{color: '#5A2020'}}>Las cartas especiales te pueden dar una gran ventaja sobre tus competidores, dales caña robando sus cartas!</p>
-                        <Image src="/thirdSectionImages/card2_2.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '35%', bottom: '50px', transform: `rotate(${scrollPercentage < 17 ? -40 : 8}deg)`}} alt="mazo" width={500} height={500} />
-                        <Image src="/thirdSectionImages/card2_1.png" style={{position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '10%', bottom: '55px', transform: `rotate(${scrollPercentage < 17 ? -40 : 8}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_2.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '35%', bottom: '50px', transform: `rotate(${animCard >= 2 ? 8 : -20}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_1.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '10%', bottom: '55px', transform: `rotate(${animCard >= 2 ? 8 : -20}deg)`}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', top: scrollPercentage < 30 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', top: scrollPercentage < 30 ? interpolar(20, 30, 480, 460) : 0}}>
                         <h3 style={{color: '#225274'}}>MEMORIA</h3>
                         <p style={{color: '#225274'}}>No olvides tu cartas, porque no podras verlas así de fácil.</p>
-                        <Image src={`/thirdSectionImages/card3_${scrollPercentage < 30 ? 2 : scrollPercentage < 32 ? 1 : scrollPercentage < 35 ? 2 : scrollPercentage < 36 ? 1 : 1 }.png`} alt="mazo" style={{width: '100%', height: '100%', objectFit: 'contain',}} width={500} height={500} />
+                        <Image src={`/thirdSectionImages/card3_${animCard3Step}.png`} alt="mazo" style={{width: '100%', height: '100%', objectFit: 'contain',}} width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', top: scrollPercentage < 40 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', top: scrollPercentage < 40 ? interpolar(20, 40, 500, 460) : 0}}>
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
                         <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '100%', height: '83%', objectFit: 'cover'}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', top: scrollPercentage < 50 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', top: scrollPercentage < 50 ? interpolar(20, 50, 520, 460) : 0}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: scrollPercentage <= 55 ? 'translateY(250px)' : 'translateY(120px)' }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 4 ? 'translateY(120px)' : 'translateY(250px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card511.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card512.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card513.png" alt="carta" width={300} height={300} />
                           </div>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: scrollPercentage <= 55 ? 'translateY(80px)' : 'translateY(160px)' }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 4 ? 'translateY(160px)' : 'translateY(80px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card523.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card521.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card522.png" alt="carta" width={300} height={300} />
                           </div>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: scrollPercentage <= 55 ? 'translateY(200px)' : 'translateY(90px)' }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 4 ? 'translateY(90px)' : 'translateY(200px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card531.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card532.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card533.png" alt="carta" width={300} height={300} />
                           </div>
                         </div>
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#F8CD78', top: scrollPercentage < 60 ? 460 : 0}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#F8CD78', top: scrollPercentage < 60 ? interpolar(20, 60, 540, 460) : 0}}>
                         <h3 style={{color: '#564421'}}>SUERTE</h3>
                         <p style={{color: '#564421'}}>Las cartas estan hechadas, puede que te toque algo bueno. No lo desperdicies.</p>
                         <div style={{display: 'flex'}}>
                             <Image src={'/thirdSectionImages/card6corona.png'} alt="corona" width={140} height={170} style={{objectFit: 'contain', width: '100%', marginTop: '80px'}}/>
-                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={50} height={50} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '30%', top: '45%', opacity: scrollPercentage >= 62 && scrollPercentage <= 65 ? 1 : 0}}/>
-                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={50} height={50} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', left: '26%', top: '65%', opacity: scrollPercentage >= 64 && scrollPercentage <= 66 ? 1 : 0}}/>
-                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={34} height={34} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '30%', top: '70%', opacity: scrollPercentage >= 60 && scrollPercentage <= 64 ? 1 : 0}}/>
+                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={50} height={50} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '30%', top: '45%', opacity: animCard5Step === 1 || animCard5Step === 3 ? 1 : 0}}/>
+                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={50} height={50} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', left: '26%', top: '65%', opacity: animCard5Step === 2 || animCard5Step === 4 ? 1 : 0}}/>
+                            <Image src={'/thirdSectionImages/card6estrella.png'} alt="corona" width={34} height={34} style={{transition: '.3s', objectFit: 'contain', position: 'absolute', right: '30%', top: '70%', opacity: animCard5Step === 3 ? 1 : 0}}/>
                         </div>             
                     </div>
                     
