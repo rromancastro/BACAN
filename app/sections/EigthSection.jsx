@@ -29,13 +29,13 @@ export const EigthSection = () => {
         if(inView) {
             setTimeout(() =>{
                 setOpacityCard1(1)
-            }, 1500)
+            }, 1300)
             setTimeout(() =>{
                 setOpacityCard2(1)
-            }, 2500)
+            }, 1600)
             setTimeout(() =>{
                 setOpacityCard3(1)
-            }, 3500)
+            }, 1900)
         } else {
             setOpacityCard1(0)
             setOpacityCard2(0) 

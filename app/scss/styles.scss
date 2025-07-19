@@ -52,3 +52,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 html {
   overflow-x: hidden;
 }
+
+body.block-scroll {
+  overflow: hidden;
+}

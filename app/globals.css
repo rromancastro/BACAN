@@ -1043,4 +1043,8 @@ html {
   overflow-x: hidden;
 }
 
+body.block-scroll {
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=globals.css.map */
