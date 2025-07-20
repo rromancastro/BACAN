@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bacan-romancastro.vercel.app/
+
+# Sitemaps
+Sitemap: https://bacan-romancastro.vercel.app/sitemap.xml
