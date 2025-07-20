@@ -73,6 +73,12 @@
         justify-content: center;
         gap: 16px;
     }
+    .socialMediaIcon {
+        transition: .3s;
+        &:hover {
+            filter: brightness(1.9);
+        }
+    }
 }
 
 @media(max-width: 835px) {

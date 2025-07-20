@@ -86,13 +86,13 @@ export const EigthSection = () => {
                     <h3>REDES SOCIALES</h3>
                     <div>
                         <a href="#" className="eightSectionDiv3Icons">
-                            <Image src="/eightSection/instagram.png" alt="Instagram" width={48} height={48} />
+                            <Image className="socialMediaIcon" src="/eightSection/instagram.png" alt="Instagram" width={48} height={48} />
                         </a>
                         <a href="#" className="eightSectionDiv3Icons">
-                            <Image src="/eightSection/facebook.png" alt="Facebook" width={48} height={48} />
+                            <Image className="socialMediaIcon" src="/eightSection/facebook.png" alt="Facebook" width={48} height={48} />
                         </a>
                         <a href="#" className="eightSectionDiv3Icons">
-                            <Image src="/eightSection/x.png" alt="X" width={48} height={48} />
+                            <Image className="socialMediaIcon" src="/eightSection/x.png" alt="X" width={48} height={48} />
                         </a>
                     </div>
                 </div>

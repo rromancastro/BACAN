@@ -738,6 +738,12 @@
   justify-content: center;
   gap: 16px;
 }
+#eightSectionDiv3 .socialMediaIcon {
+  transition: 0.3s;
+}
+#eightSectionDiv3 .socialMediaIcon:hover {
+  filter: brightness(1.9);
+}
 
 @media (max-width: 835px) {
   #eigthSection {
@@ -917,7 +923,6 @@
   flex-direction: column;
   width: 160px;
   height: 44px;
-  align-items: center;
   justify-content: space-between;
 }
 #navBarLogo #divFormas {
@@ -926,8 +931,9 @@
 }
 #navBarLogo #divLetras {
   display: flex;
-  width: 160px;
-  justify-content: center;
+  width: 150px;
+  justify-content: space-between;
+  padding: 0 3px;
   gap: 25px;
 }
 
