@@ -41,7 +41,7 @@ export const SecondSection = () => {
 
   //logica animacion entrada textos
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: width >= 835 ? 0.7 : 0.4,
     triggerOnce: true,
   });
 
