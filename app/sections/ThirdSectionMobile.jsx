@@ -44,6 +44,8 @@ export const ThirdSectionMobile = () => {
     const [animCard3Step, setAnimCard3Step] = useState(1);
     const [animCard5Step, setAnimCard5Step] = useState(0);
 
+    const [animatingCard3, setAnimatingCard3] = useState(false);    
+
 
     useEffect(() => {
         if (scrollPercentage >= 20 && scrollPercentage < 22) {
@@ -52,7 +54,9 @@ export const ThirdSectionMobile = () => {
             }, 800);
         }
         if (scrollPercentage >= 30 && scrollPercentage < 32) {  
+            if(!animatingCard3) {
             setTimeout(() => {
+                setAnimatingCard3(true);
                 setAnimCard(3);  
                 setAnimCard3Step(2);
             }, 800);
@@ -64,7 +68,9 @@ export const ThirdSectionMobile = () => {
             }, 2000);
             setTimeout(() => {
                 setAnimCard3Step(1);
+                setAnimatingCard3(false);
             }, 2600);
+        }
         }
         if (scrollPercentage >= 50 && scrollPercentage < 52) {
             setTimeout(() => {
