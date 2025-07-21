@@ -58,8 +58,8 @@ export const ThirdSection = () => {
           <div onMouseOver={() => setAnimarCard2(true)} onMouseOut={() => setAnimarCard2(false)} style={{gap: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gridArea: 'area2', backgroundColor: '#FF8283', borderRadius: '16px', padding: '24px'}}>
             <h3 style={{fontWeight: '600', fontSize: '16px', color: '#5A2020'}}>AGILIDAD</h3>
             <p style={{fontWeight: '400', fontSize: '12px', color: '#5A2020'}}>Las cartas especiales te pueden dar una gran ventaja sobre tus competidores, dales caña robando sus cartas!</p>
-            <Image className="card2" src="/thirdSectionImages/card2_2.png" alt="carta" width={500} height={500} style={{transition: 1, objectFit: 'contain', position: 'absolute', width: '157px', height: '179px', left: '55%', top: '-40px', transform: animarCard2 ? 'rotate(8deg)' : null}} />
-            <Image className="card2" src="/thirdSectionImages/card2_1.png" alt="carta" width={500} height={500} style={{transition: 1, objectFit: 'contain', position: 'absolute', width: '157px', height: '179px', left: '40%', top: '-40px', transform: animarCard2 ? 'rotate(8deg)' : null}} />
+            <Image className="card2" src="/thirdSectionImages/card2_2.png" alt="carta" width={500} height={500} style={{transition: 1, objectFit: 'contain', position: 'absolute', width: '157px', height: '179px', left: '55%', top: '-40px', transform: animarCard2 ? 'rotate(27deg)' : 'rotate(19.86deg)' }} />
+            <Image className="card2" src="/thirdSectionImages/card2_1.png" alt="carta" width={500} height={500} style={{transition: 1, objectFit: 'contain', position: 'absolute', width: '157px', height: '179px', left: '40%', top: '-40px', transform: animarCard2 ? 'rotate(-5deg)' : 'rotate(-13.38deg)' }} />
           </div>
 
           <div onMouseOver={() => setAnimarCard3(true)} onMouseOut={() => setAnimarCard3(false)} style={{gap: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gridArea: 'area3', backgroundColor: '#7ABDEC', borderRadius: '16px', padding: '24px'}}>

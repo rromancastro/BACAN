@@ -41,7 +41,7 @@ export const SecondSection = () => {
 
   //logica animacion entrada textos
   const { ref, inView } = useInView({
-    threshold: width >= 835 ? 1 : 0.1,
+    threshold: 0.7,
     triggerOnce: true,
   });
 
@@ -99,11 +99,11 @@ export const SecondSection = () => {
     
 
     return (
-        <section id="secondSection">
-            <h2 ref={ref} style={{opacity: inView ? 1 : 0}} id="secondSectionH2">JUGANDO,<br />LA VIDA ES<br />MÁS BACANA.</h2>
+        <section ref={ref} id="secondSection">
+            <h2 style={{opacity: inView ? 1 : 0}} id="secondSectionH2">JUGANDO,<br />LA VIDA ES<br />MÁS BACANA.</h2>
             
 
-            <h2 ref={ref} style={{ opacity: inView ? 1 : 0 }} id="secondSectionH2Mobile">
+            <h2 style={{ opacity: inView ? 1 : 0 }} id="secondSectionH2Mobile">
               JUGANDO,<br />LA VIDA ES MÁS<br />BACANA.
             </h2>
 

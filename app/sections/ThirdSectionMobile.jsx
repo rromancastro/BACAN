@@ -102,8 +102,8 @@ export const ThirdSectionMobile = () => {
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out', backgroundColor: '#FF8283', top: scrollPercentage < 20 ? 460 : 0 }}>
                         <h3 style={{color: '#5A2020'}}>AGILIDAD</h3>
                         <p style={{color: '#5A2020'}}>Las cartas especiales te pueden dar una gran ventaja sobre tus competidores, dales caña robando sus cartas!</p>
-                        <Image src="/thirdSectionImages/card2_2.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '35%', bottom: '50px', transform: `rotate(${animCard >= 2 ? 8 : -20}deg)`}} alt="mazo" width={500} height={500} />
-                        <Image src="/thirdSectionImages/card2_1.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '204px', height: 'auto', objectFit: 'contain', left: '10%', bottom: '55px', transform: `rotate(${animCard >= 2 ? 8 : -20}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_2.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '150px', height: 'auto', objectFit: 'contain', left: '45%', bottom: '50px', transform: `rotate(${animCard >= 2 ? 13 : 3}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_1.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '150px', height: 'auto', objectFit: 'contain', left: '18%', bottom: '50px', transform: `rotate(${animCard >= 2 ? -20 : -30}deg)`}} alt="mazo" width={500} height={500} />
                     </div>
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', top: scrollPercentage < 30 ? interpolar(20, 30, 480, 460) : 0}}>
                         <h3 style={{color: '#225274'}}>MEMORIA</h3>
