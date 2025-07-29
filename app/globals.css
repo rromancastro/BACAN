@@ -1015,24 +1015,28 @@
   src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 * {
   box-sizing: border-box;
@@ -1043,14 +1047,6 @@
 
 h1, h2, h3, h4, h5, h6, p, a, button {
   font-family: "Montserrat";
-}
-
-html {
-  overflow-x: hidden;
-}
-
-body.block-scroll {
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=globals.css.map */

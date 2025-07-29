@@ -4,24 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 export const FifthSection = () => {
     const [mostrarImagen, setMostrarImagen] = useState(1);
-    const intervalRef = useRef(null);
-
-    const handleMouseEnter = () => {
-        if (!intervalRef.current) {
-         intervalRef.current = setInterval(() => {
-            setMostrarImagen(prev => (prev >= 5 ? 1 : prev + 1));
-        }, 800);
-        }
-    };
-
-    const handleMouseLeave = () => {
-        if (width > 835) {
-            if (intervalRef.current) {
-            clearInterval(intervalRef.current);
-            intervalRef.current = null;
-            }
-        }
-    };
 
     //logica autoplay 
     const [width, setWidth] = useState(0);
@@ -36,14 +18,14 @@ export const FifthSection = () => {
     }, []);
 
     useEffect(() => {
-        if (width <= 835) {
-            handleMouseEnter();
-        }
-    }, [width])
+        setInterval(() => {
+            setMostrarImagen(prev => (prev >= 5 ? 1 : prev + 1));
+        }, 800);
+    }, [])
 
     return (
         <section id="fifthSection">
-            <div onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor: 'transparent'}} id="fifthSectionCard">
+            <div style={{backgroundColor: 'transparent'}} id="fifthSectionCard">
                 {width >= 500 ? <h2 id="fifthSectionH2">¿DONDE<br />CONSIGO MI<br />BACAN?</h2> : <h2 id="fifthSectionH2">¿DONDE CONSIGO<br />MI BACAN?</h2>}
                 <a id="fifthSectionA" href="#">Quiero mi mazo</a>
                 {
