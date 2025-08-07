@@ -65,14 +65,19 @@ export const ThirdSectionMobile = () => {
             }, 2600);
         }
         }
-        if (scrollPercentage >= 50 && scrollPercentage < 52) {
+        if (scrollPercentage >= 40 && scrollPercentage < 42) {
             setTimeout(() => {
                 setAnimCard(4);  
             }, 800);
         }
-        if (scrollPercentage >= 60 && scrollPercentage < 62) {
+        if (scrollPercentage >= 50 && scrollPercentage < 52) {
             setTimeout(() => {
                 setAnimCard(5);  
+            }, 800);
+        }
+        if (scrollPercentage >= 60 && scrollPercentage < 62) {
+            setTimeout(() => {
+                setAnimCard(6);  
                 setAnimCard5Step(1);
             }, 800);
             setTimeout(() => {
@@ -112,22 +117,24 @@ export const ThirdSectionMobile = () => {
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', top: scrollPercentage < 40 ? 500 : 0}}>
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
                         <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '100%', height: '83%', objectFit: 'cover'}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card4flecha1.png" alt="mazo" width={18} height={18} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '18px', height: '18px', objectFit: 'contain', bottom: '29.5%', left: '23.5%',borderRadius: '16px', objectPosition: 'top'}}/>
+                        <Image src="/thirdSectionImages/card4flecha2.png" alt="mazo" width={18} height={18} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '18px', height: '18px', objectFit: 'contain', bottom: '34.5%', left: '66.5%',borderRadius: '16px', objectPosition: 'top'}}/>
                     </div>
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', top: scrollPercentage < 50 ? 520 : 0}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 4 ? 'translateY(120px)' : 'translateY(250px)' }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 5 ? 'translateY(120px)' : 'translateY(250px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card511.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card512.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card513.png" alt="carta" width={300} height={300} />
                           </div>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 4 ? 'translateY(160px)' : 'translateY(80px)' }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 5 ? 'translateY(160px)' : 'translateY(80px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card523.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card521.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card522.png" alt="carta" width={300} height={300} />
                           </div>
-                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 4 ? 'translateY(90px)' : 'translateY(200px)' }}>
+                          <div style={{transition: '.5s', display: 'flex', flexDirection: 'column', transform: animCard >= 5 ? 'translateY(90px)' : 'translateY(200px)' }}>
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card531.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card532.png" alt="carta" width={300} height={300} />
                             <Image style={{width: '99px', height: '127px', objectFit: 'contain'}} src="/thirdSectionImages/card533.png" alt="carta" width={300} height={300} />

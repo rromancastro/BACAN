@@ -14,6 +14,9 @@ export const ThirdSection = () => {
 //card 3
     const [animarCard3, setAnimarCard3] = useState(false);
 
+//card 4
+    const [animarCard4, setAnimarCard4] = useState(false);
+
 //card 5 
     const [animarCard5, setAnimarCard5] = useState(false);
 
@@ -70,9 +73,11 @@ export const ThirdSection = () => {
             <p style={{fontWeight: '400', fontSize: '12px', color: '#225274'}}>No olvides tu cartas, porque no podras verlas así de fácil.</p>
           </div>
 
-          <div style={{gap: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gridArea: 'area4', backgroundColor: '#EF91CD', borderRadius: '16px'}}>
+          <div onMouseOver={() => setAnimarCard4(true)} onMouseLeave={() => setAnimarCard4(false)} style={{gap: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gridArea: 'area4', backgroundColor: '#EF91CD', borderRadius: '16px'}}>
             <h3 style={{fontWeight: '600', fontSize: '16px', color: '#7F225D', padding: '24px'}}>CONCENTRACIÓN</h3>
             <Image style={{position: 'absolute', width: '100%', height: '80%',objectFit: 'cover', bottom: 0, borderRadius: '16px', objectPosition: 'top'}} src="/thirdSectionImages/card4.png" alt="mazo" width={200} height={200}/>
+            <Image src="/thirdSectionImages/card4flecha1.png" alt="mazo" width={9} height={9} style={{transition: '.5s', transform: animarCard4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '9px', height: '9px', objectFit: 'contain', bottom: '25.5%', left: '26.5%',borderRadius: '16px', objectPosition: 'top'}}/>
+            <Image src="/thirdSectionImages/card4flecha2.png" alt="mazo" width={9} height={9} style={{transition: '.5s', transform: animarCard4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '9px', height: '9px', objectFit: 'contain', bottom: '30%', left: '65%',borderRadius: '16px', objectPosition: 'top'}}/>
           </div>
 
           <div onMouseOver={() => setAnimarCard5(true)} onMouseLeave={()=>setAnimarCard5(false)} style={{gap: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gridArea: 'area5', overflow: 'hidden',backgroundColor: '#B1D18D', borderRadius: '16px', padding: '24px'}}>
