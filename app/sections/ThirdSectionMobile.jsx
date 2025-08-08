@@ -116,9 +116,9 @@ export const ThirdSectionMobile = () => {
                     </div>
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', top: scrollPercentage < 40 ? 500 : 0}}>
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
-                        <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '100%', height: '83%', objectFit: 'cover'}} alt="mazo" width={500} height={500} />
-                        <Image src="/thirdSectionImages/card4flecha1.png" alt="mazo" width={18} height={18} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '18px', height: '18px', objectFit: 'contain', bottom: '29.5%', left: '23.5%',borderRadius: '16px', objectPosition: 'top'}}/>
-                        <Image src="/thirdSectionImages/card4flecha2.png" alt="mazo" width={18} height={18} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '18px', height: '18px', objectFit: 'contain', bottom: '34.5%', left: '66.5%',borderRadius: '16px', objectPosition: 'top'}}/>
+                        <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '400px', height: 'auto', objectFit: 'cover', objectPosition: 'center'}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card4flecha1.png" alt="mazo" width={18} height={18} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '18px', height: '18px', objectFit: 'contain', bottom: '118px', left: '105px',borderRadius: '16px', objectPosition: 'top'}}/>
+                        <Image src="/thirdSectionImages/card4flecha2.png" alt="mazo" width={18} height={18} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-180deg)' : null,position: 'absolute', width: '18px', height: '18px', objectFit: 'contain', bottom: '138px', left: '258px',borderRadius: '16px', objectPosition: 'top'}}/>
                     </div>
                     <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', top: scrollPercentage < 50 ? 520 : 0}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
