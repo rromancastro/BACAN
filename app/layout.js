@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "BACAN",
-  description: "Bacan, jugar, reir, bacan",
-  metadataBase: new URL("https://bacan-romancastro.vercel.app/"),
+  description: "BACAN - Lo más importante de este juego no es ganar, sino, no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos!",
+  metadataBase: new URL("https://bacanplay.com/"),
   openGraph: {
     title: "BACAN",
-    description: "Bacan, jugar, reir, bacan",
-    url: "https://bacan-romancastro.vercel.app/",
+    description: "BACAN - Lo más importante de este juego no es ganar, sino, no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos!",
+    url: "https://bacanplay.com/og-image.jpg",
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://bacanplay.com/og-image.jpg',
         width: 1200,
         height: 630,  
         alt: "Captura de pantalla del sitio",  
@@ -33,8 +33,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BACAN",
-    description: "Bacan, jugar, reir, bacan",
-    images: ["/og-image.jpg"],  
+    description: "BACAN - Lo más importante de este juego no es ganar, sino, no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos!",
+    images: ["https://bacanplay.com/og-image.jpg"],  
   },
   icons: {
     icon: "/favicon.ico",
@@ -44,12 +44,18 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "https://bacanplay.com",
   }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
