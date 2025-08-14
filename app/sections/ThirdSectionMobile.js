@@ -66,7 +66,7 @@ export const ThirdSectionMobile = () => {
                 setAnimCard(5);  
             }, 800);
         }
-        if (scrollPercentage >= 60 && scrollPercentage < 62) {
+        if (scrollPercentage >= 60 && scrollPercentage < 61) {
             setTimeout(() => {
                 setAnimCard(6);  
                 setAnimCard5Step(1);
