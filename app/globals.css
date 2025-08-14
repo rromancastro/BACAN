@@ -197,7 +197,8 @@
 
 #thirdSectionMobile {
   width: 100%;
-  height: 790vh;
+  background-color: red;
+  height: 95dvh;
   display: none;
   padding: 64px 16px;
   flex-direction: column;

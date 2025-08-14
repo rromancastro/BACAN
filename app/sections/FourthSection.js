@@ -55,7 +55,7 @@ const imgs = [
               </div>
               <div id="fourthSectionTextosContainer">
                   <h2 id="fourthSectionH2" style={{opacity: `${interpolar(50, 51, 0, 100)}%`}}>LO QUE<br />DICE LA PEÑA</h2>
-                  <p id="fourthSectionP" style={{opacity: `${interpolar(50, 51, 0, 100)}%`}}>Esta gente esta relamente loca, mira lo<br />que dicen. No nos hacemos responsables<br />por estos comentarios. Tu veras...</p>
+                  <p id="fourthSectionP" style={{opacity: `${interpolar(50, 51, 0, 100)}%`}}>Esta gente esta realmente loca, mira lo<br />que dicen. No nos hacemos responsables<br />por estos comentarios. Tu veras...</p>
               </div>
           </div>
           <div id="fourthSectionMobile">
