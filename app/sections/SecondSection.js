@@ -14,6 +14,8 @@ export const SecondSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   useEffect(() => {
     const sources = [
       "/secondSection/1.png",
@@ -22,13 +24,18 @@ export const SecondSection = () => {
       "/secondSection/4.png",
       "/secondSection/5.png",
     ];
-    if (typeof window !== "undefined") {
-      sources.forEach((src) => {
-        const img = new window.Image();
-        img.src = src;
-      });
-    }
+    
+    let loaded = 0;
+    sources.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+      img.onload = () => {
+        loaded++;
+        if (loaded === sources.length) setImagesLoaded(true);
+      };
+    });
   }, []);
+
 
   const { ref, inView } = useInView({
     threshold: width >= 835 ? 0.7 : 0.4,
@@ -68,7 +75,7 @@ export const SecondSection = () => {
 
     setTimeout(() => {
       setEstaAnimando(false);
-    }, 600);
+    }, 700);
   };
 
   const handleRestar = () => {
@@ -102,10 +109,16 @@ export const SecondSection = () => {
       </h2>
 
       <div id="secondSectionImageAndButton">
-        <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped} flipSpeedBackToFront={0.6} flipSpeedFrontToBack={0.6}>
+        {imagesLoaded && (<ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped} flipSpeedBackToFront={0.6} flipSpeedFrontToBack={0.6}>
           <Image id="secondSectionImage" src={`/secondSection/${currentFront}.png`} alt="mazo" width={1000} height={1000} />
           <Image id="secondSectionImage" src={`/secondSection/${currentBack}.png`} alt="mazo" width={1000} height={1000} />
-        </ReactCardFlip>
+        </ReactCardFlip>)}
+
+        <div style={{display: "none"}}>
+          {[1,2,3,4,5].map(n => (
+            <Image key={n} src={`/secondSection/${n}.png`} alt="" width={10} height={10}/>
+          ))}
+        </div>
 
         <div id="secondSectionButtonContainer">
           <button onClick={handleRestar} className="secondSectionButton" >
