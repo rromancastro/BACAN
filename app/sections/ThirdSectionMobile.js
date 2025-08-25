@@ -6,11 +6,6 @@ export const ThirdSectionMobile = () => {
 
     // porcentaje de scroll
       const [scrollPercentage, setScrollPercentage] = useState(0);
-
-      useEffect(() => {
-            console.log(scrollPercentage)
-            
-      }, [scrollPercentage])
     
       useEffect(() => {
         let ticking = false;
