@@ -109,16 +109,17 @@ export const SecondSection = () => {
       </h2>
 
       <div id="secondSectionImageAndButton">
+        {imagesLoaded && (
+          <div style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}>
+            {[1,2,3,4,5].map(n => (
+              <Image key={n} src={`/secondSection/${n}.png`} alt="" width={1000} height={1000} />
+            ))}
+          </div>
+        )}
         {imagesLoaded && (<ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped} flipSpeedBackToFront={0.6} flipSpeedFrontToBack={0.6}>
-          <Image id="secondSectionImage" src={`/secondSection/${currentFront}.png`} alt="mazo" width={1000} height={1000} />
-          <Image id="secondSectionImage" src={`/secondSection/${currentBack}.png`} alt="mazo" width={1000} height={1000} />
+          <Image priority id="secondSectionImage" src={`/secondSection/${currentFront}.png`} alt="mazo" width={1000} height={1000} />
+          <Image priority id="secondSectionImage" src={`/secondSection/${currentBack}.png`} alt="mazo" width={1000} height={1000} />
         </ReactCardFlip>)}
-
-        <div style={{display: "none"}}>
-          {[1,2,3,4,5].map(n => (
-            <Image key={n} src={`/secondSection/${n}.png`} alt="" width={10} height={10}/>
-          ))}
-        </div>
 
         <div id="secondSectionButtonContainer">
           <button onClick={handleRestar} className="secondSectionButton" >
