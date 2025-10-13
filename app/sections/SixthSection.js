@@ -43,8 +43,8 @@ export const SixthSection = () => {
                 <Image style={{transition: '1s', zIndex: 5, top: width >= 835 ? animCards ? '60px' : '10px' : animCards ? '30px' : '10px', transform: !animCards ? '' : 'translateX(-145%) rotate(-45deg)'}} className="sixthSectionImage" src="/sixthSection/6.png" alt="Sixth Section Image" width={500} height={500} />
                 <Image style={{transition: '1s', zIndex: 6, top: width >= 835 ? animCards ? '60px' : '10px' : animCards ? '30px' : '10px', transform: !animCards ? '' : 'translateX(145%) rotate(45deg)'}} className="sixthSectionImage" src="/sixthSection/7.png" alt="Sixth Section Image" width={500} height={500} />
             </div>
-            <p id="sixthSectionP">Este documento fue realizado para quitar<br />dudas y terminar de clarificar los términos<br />de juego. Básicamente para que tus<br />amigos no hagan trampas.</p>
-            <a id="navUtilitiesButton" href="#">
+            <p id="sixthSectionP">Este documento fue realizado para quitar<br />dudas y terminar de clarificar los términos<br />del juego. Básicamente, para que tus<br />amigos no hagan trampas.</p>
+            <a id="navUtilitiesButton" href="/Reglas-Bacan.pdf" download>
                   <p id="navUtilitiesButtonText">Descargar</p>
             </a>
         </section>

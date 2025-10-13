@@ -740,6 +740,7 @@
 }
 #eightSectionDiv3 .socialMediaIcon {
   transition: 0.3s;
+  object-fit: contain;
 }
 #eightSectionDiv3 .socialMediaIcon:hover {
   filter: brightness(1.9);

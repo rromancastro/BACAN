@@ -75,6 +75,7 @@
     }
     .socialMediaIcon {
         transition: .3s;
+        object-fit: contain;
         &:hover {
             filter: brightness(1.9);
         }

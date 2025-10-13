@@ -95,7 +95,7 @@ const imgs = [
       </div>
 
       <p id="fourthSectionP">
-        Esta gente está realmente<br />loca, mira lo que dicen. No nos<br />hacemos responsables por<br />estos comentarios. Tu verás...
+        Esta gente está realmente<br />loca, mira lo que dicen. No nos<br />hacemos responsables por<br />estos comentarios. Tú verás…
       </p>
     </div>
         </section>

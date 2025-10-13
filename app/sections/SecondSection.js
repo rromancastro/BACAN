@@ -112,13 +112,13 @@ export const SecondSection = () => {
         {imagesLoaded && (
           <div style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}>
             {[1,2,3,4,5].map(n => (
-              <Image key={n} src={`/secondSection/${n}.png`} alt="" width={1000} height={1000} />
+              <Image key={n} src={`/secondSection/${n}.png`} alt="" width={274} height={379} />
             ))}
           </div>
         )}
         {imagesLoaded && (<ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped} flipSpeedBackToFront={0.6} flipSpeedFrontToBack={0.6}>
-          <Image priority id="secondSectionImage" src={`/secondSection/${currentFront}.png`} alt="mazo" width={1000} height={1000} />
-          <Image priority id="secondSectionImage" src={`/secondSection/${currentBack}.png`} alt="mazo" width={1000} height={1000} />
+          <Image priority id="secondSectionImage" src={`/secondSection/${currentFront}.png`} alt="mazo" width={274} height={379} />
+          <Image priority id="secondSectionImage" src={`/secondSection/${currentBack}.png`} alt="mazo" width={274} height={379} />
         </ReactCardFlip>)}
 
         <div id="secondSectionButtonContainer">
@@ -142,7 +142,7 @@ export const SecondSection = () => {
       </div>
 
       <p style={{opacity: inView ? 1 : 0}} id="secondSectionP">
-        Lo más importante de este juego no es ganar, sino, no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos!
+        Lo más importante de este juego no es ganar, sino no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos.
       </p>
     </section>
   );

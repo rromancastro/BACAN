@@ -78,9 +78,9 @@ export const EigthSection = () => {
                 <div style={{opacity: width >= 835 ? 1 : opacityCard1, transition: '1s'}} id="eightSectionDiv2">
                     <div>
                         <h3>AYUDA</h3>
-                        {width >= 835 ? <p>¿Alguna duda sobre el juego? Ponte en contacto con nosotros a travez de<br />nuestras redes. No dejes que tus colegas hagan trampas, conocemos las<br />reglas y podemos ayudarte.</p> : <p>¿Alguna duda sobre el juego? Ponte en contacto con nosotros a travez de nuestras redes. No dejes que tus colegas hagan trampas, conocemos las reglas y podemos ayudarte.</p>}
+                        {width >= 835 ? <p>¿Alguna duda sobre el juego? Ponte en contacto con nosotros a través de<br />nuestras redes. No dejes que tus colegas hagan trampas, conocemos las<br />reglas y podemos ayudarte.</p> : <p>¿Alguna duda sobre el juego? Ponte en contacto con nosotros a través de nuestras redes. No dejes que tus colegas hagan trampas, conocemos las reglas y podemos ayudarte.</p>}
                     </div>
-                    <p>Para consultas comerciales también pueden contactarnos a<br /><span>ventas@bacan.com</span> o al <span>+34 5527 1948</span></p>
+                    <p>Para consultas comerciales, también pueden contactarnos en <br /><span>bacan.play.oficial@gmail.com</span> o al <span>+34 684487798</span></p>
                 </div>
                 <div style={{opacity: width >= 835 ? 1 : opacityCard2, transition: '1s'}} id="eightSectionDiv3">
                     <h3>REDES SOCIALES</h3>
@@ -89,10 +89,7 @@ export const EigthSection = () => {
                             <Image className="socialMediaIcon" src="/eightSection/instagram.png" alt="Instagram" width={48} height={48} />
                         </a>
                         <a href="#" className="eightSectionDiv3Icons">
-                            <Image className="socialMediaIcon" src="/eightSection/facebook.png" alt="Facebook" width={48} height={48} />
-                        </a>
-                        <a href="#" className="eightSectionDiv3Icons">
-                            <Image className="socialMediaIcon" src="/eightSection/x.png" alt="X" width={48} height={48} />
+                            <Image className="socialMediaIcon" src="/eightSection/youtube.png" alt="Youtube" width={48} height={48} />
                         </a>
                     </div>
                 </div>
