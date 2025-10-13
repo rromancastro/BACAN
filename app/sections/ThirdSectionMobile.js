@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 
 export const ThirdSectionMobile = () => {
     //anim cards
+    const [moveCard, setMoveCard] = useState(1);
     const [animCard, setAnimCard] = useState(1);
 
     const [animCard3Step, setAnimCard3Step] = useState(2);
     const [animCard5Step, setAnimCard5Step] = useState(0);
-
-    const [animatingCard3, setAnimatingCard3] = useState(false);    
 
     //detectar swipes
     let touchStartX = 0;
@@ -29,15 +28,20 @@ export const ThirdSectionMobile = () => {
         const minDistance = 50;
 
         if (distance > minDistance) {
-            if (animCard > 1) setAnimCard(prev => prev - 1);
+            if (moveCard > 1) setMoveCard(prev => prev - 1);
         } else if (distance < -minDistance) {
-            if (animCard < 6) setAnimCard(prev => prev + 1);
+            if (moveCard < 6) setMoveCard(prev => prev + 1);
         }
     };
 
     //anim cards
     useEffect(() => {
-        if (animCard === 3) {
+        if (moveCard === 2) {
+            setTimeout(() => {
+                setAnimCard(2);
+            }, 500);
+        }
+        if (moveCard === 3) {
             setAnimCard3Step(1);
             setTimeout(() => {
                 setAnimCard3Step(2);
@@ -46,7 +50,17 @@ export const ThirdSectionMobile = () => {
                 setAnimCard3Step(1);
             }, 1000);
         }
-        if (animCard === 5) {
+        if (moveCard === 4) {
+            setTimeout(() => {
+                setAnimCard(4);
+            }, 500);
+        }
+        if (moveCard === 5) {
+            setTimeout(() => {
+                setAnimCard(5);
+            }, 500);
+        }
+        if (moveCard === 6) {
             setTimeout(() => {
                 setAnimCard5Step(1);
             }, 800);
@@ -60,7 +74,7 @@ export const ThirdSectionMobile = () => {
                 setAnimCard5Step(4);
             }, 2000);
         }
-    }, [animCard])
+    }, [moveCard])
 
     return (
         <section id="thirdSectionMobile">
@@ -71,24 +85,24 @@ export const ThirdSectionMobile = () => {
                         <p style={{color: '#564421'}}>Si eres un tortuga, despierta! Aquí no te esperan para cruzar la calle.</p>
                         <Image src="/thirdSectionImages/card1.png" alt="mazo" style={{borderRadius: '16px', width: '80%', height: '60%', transform: 'rotate(-8deg)', alignSelf: 'center', marginTop: '46px'}} width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out', backgroundColor: '#FF8283', left: animCard >= 2 ? '5%' : '98%'}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out', backgroundColor: '#FF8283', left: moveCard >= 2 ? '5%' : moveCard >= 1 ? '98%' : '110%'}}>
                         <h3 style={{color: '#5A2020'}}>AGILIDAD</h3>
                         <p style={{color: '#5A2020'}}>Las cartas especiales te pueden dar una gran ventaja sobre tus competidores, dales caña robando sus cartas!</p>
-                        <Image src="/thirdSectionImages/card2_2.png" style={{transition: '1s ease-in-out', position: 'absolute', width: '150px', height: 'auto', objectFit: 'contain', left: '45%', bottom: '50px', transform: `rotate(${animCard >= 2 ? 13 : 3}deg)`}} alt="mazo" width={500} height={500} />
-                        <Image src="/thirdSectionImages/card2_1.png" style={{transition: '1s ease-in-out', position: 'absolute', width: '150px', height: 'auto', objectFit: 'contain', left: '18%', bottom: '50px', transform: `rotate(${animCard >= 2 ? -20 : -30}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_2.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '150px', height: 'auto', objectFit: 'contain', left: '45%', bottom: '50px', transform: `rotate(${animCard == 2 ? 13 : 3}deg)`}} alt="mazo" width={500} height={500} />
+                        <Image src="/thirdSectionImages/card2_1.png" style={{transition: '.5s ease-in-out', position: 'absolute', width: '150px', height: 'auto', objectFit: 'contain', left: '18%', bottom: '50px', transform: `rotate(${animCard == 2 ? -20 : -30}deg)`}} alt="mazo" width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', left: animCard >= 3 ? '5%' : '98%'}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#7ABDEC', left: moveCard >= 3 ? '5%' : moveCard >= 2 ? '98%' : '110%'}}>
                         <h3 style={{color: '#225274'}}>MEMORIA</h3>
                         <p style={{color: '#225274'}}>No olvides tu cartas, porque no podras verlas así de fácil.</p>
                         <Image src={`/thirdSectionImages/card3_${animCard3Step}.png`} alt="mazo" style={{width: '100%', height: '100%', objectFit: 'contain',}} width={500} height={500} />
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', left: animCard >= 4 ? '5%' : '98%'}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#EF91CD', left: moveCard >= 4 ? '5%' : moveCard >= 3 ? '98%' : '110%'}}>
                         <h3 style={{color: '#7F225D'}}>CONCENTRACIÓN</h3>
                         <Image src="/thirdSectionImages/card4.png" style={{position: 'absolute', left: 0, bottom: 0, width: '400px', height: 'auto', objectFit: 'cover', objectPosition: 'center'}} alt="mazo" width={500} height={500} />
-                        <Image src="/thirdSectionImages/card4flecha1.png" alt="mazo" width={19} height={19} style={{transition: '2s', transform: animCard === 3 ? 'rotate(-155deg)' : 'rotate(20deg)',position: 'absolute', width: '19px', height: '19px', objectFit: 'contain', bottom: '121px', left: '103px',borderRadius: '16px', objectPosition: 'top'}}/>
-                        <Image src="/thirdSectionImages/card4flecha2.png" alt="mazo" width={19} height={19} style={{transition: '2s', transform: animCard === 3 ? 'rotate(-215deg)' : 'rotate(-30deg)',position: 'absolute', width: '19px', height: '19px', objectFit: 'contain', bottom: '140px', left: '258px',borderRadius: '16px', objectPosition: 'top'}}/>
+                        <Image src="/thirdSectionImages/card4flecha1.png" alt="mazo" width={19} height={19} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-155deg)' : 'rotate(20deg)',position: 'absolute', width: '19px', height: '19px', objectFit: 'contain', bottom: '121px', left: '103px',borderRadius: '16px', objectPosition: 'top'}}/>
+                        <Image src="/thirdSectionImages/card4flecha2.png" alt="mazo" width={19} height={19} style={{transition: '.5s', transform: animCard === 4 ? 'rotate(-215deg)' : 'rotate(-30deg)',position: 'absolute', width: '19px', height: '19px', objectFit: 'contain', bottom: '140px', left: '258px',borderRadius: '16px', objectPosition: 'top'}}/>
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', left: animCard >= 5 ? '5%' : '98%'}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#B1D18D', left: moveCard >= 5 ? '5%' : moveCard >= 4 ? '98%' : '110%'}}>
                         <h3 style={{color: '#2B440E'}}>ESTRATEGIA</h3>
                         <p style={{color: '#2B440E'}}>Arma tu jugada, las cartas te acompañan.</p>
                         <div style={{position: 'absolute', display: 'flex', rotate: '-15deg', left: '30px'}}>
@@ -109,7 +123,7 @@ export const ThirdSectionMobile = () => {
                           </div>
                         </div>
                     </div>
-                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#F8CD78', left: animCard >= 6 ? '5%' : '98%'}}>
+                    <div className="thirdSectionMobileCard" style={{transition: '.5s ease-in-out',backgroundColor: '#F8CD78', left: moveCard >= 6 ? '5%' : moveCard >= 5 ? '98%' : '110%'}}>
                         <h3 style={{color: '#564421'}}>SUERTE</h3>
                         <p style={{color: '#564421'}}>Las cartas estan hechadas, puede que te toque algo bueno. No lo desperdicies.</p>
                         <div style={{display: 'flex'}}>
