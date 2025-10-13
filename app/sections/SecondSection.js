@@ -24,7 +24,7 @@ export const SecondSection = () => {
       "/secondSection/4.png",
       "/secondSection/5.png",
     ];
-    
+
     let loaded = 0;
     sources.forEach((src) => {
       const img = new window.Image();
