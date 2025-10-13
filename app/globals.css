@@ -197,22 +197,13 @@
 
 #thirdSectionMobile {
   width: 100%;
-  height: 970vh;
+  height: 100svh;
   display: none;
   padding: 64px 16px;
   flex-direction: column;
-  align-items: center;
-}
-
-#thirdSectionMobileSticky {
-  width: 100%;
-  height: 87vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 10vh;
+  align-items: center;
+  overflow: hidden;
 }
 
 #thirdSectionMobileCarsContainer {
@@ -227,7 +218,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 440px;
   overflow: hidden;
   padding: 32px 24px;
