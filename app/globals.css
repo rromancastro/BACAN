@@ -370,6 +370,16 @@
   will-change: transform;
 }
 
+.fourthSectionMarqueeTrack.paused {
+  animation-play-state: paused;
+}
+
+.fourthSectionMarqueeStatic {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .fourthSectionImageMobile {
   flex: 0 0 auto;
   height: auto;

@@ -32,7 +32,7 @@ const imgs = [
     
         window.addEventListener("scroll", handleScroll);
         
-        return () => window.removeEventListener("scroll", handleScroll).toFixed(1);
+        return () => window.removeEventListener("scroll", handleScroll);
       }, []);
 
     function interpolar(minimo, maximo, posInicio, posFin) {
@@ -40,7 +40,10 @@ const imgs = [
       if (scrollPercentage >= maximo) return posFin;
       return posInicio + ((scrollPercentage - minimo) * (posFin - posInicio)) / (maximo - minimo);
     }
-    
+
+    const [isPaused, setIsPaused] = useState(false);
+
+
     return (
         <section id="fourthSection">
           <div id="fourthSectionSticky">
@@ -64,15 +67,15 @@ const imgs = [
       </h2>
 
       {/* Contenedor marquee */}
-      <div className="fourthSectionMarquee">
-        <div className="fourthSectionMarqueeTrack">
+      <div className="fourthSectionMarquee" onClick={() => setIsPaused(!isPaused)}>
+        <div className={`fourthSectionMarqueeTrack ${isPaused ? "paused" : ""}`}>
           {/* 1er set */}
           {imgs.map((src) => (
             <Image
               key={`a-${src}`}
               src={src}
               className="fourthSectionImageMobile"
-              alt="testimonio"
+              alt="review"
               width={258}
               height={200}
               priority={false}
@@ -84,10 +87,10 @@ const imgs = [
               key={`b-${src}`}
               src={src}
               className="fourthSectionImageMobile"
-              alt="testimonio duplicado"
+              alt="review duplicado"
               width={258}
               height={200}
-              aria-hidden="true" // accesibilidad: duplicado no anunciado
+              aria-hidden="true"
               priority={false}
             />
           ))}
