@@ -24,8 +24,8 @@ export const metadata = {
       {
         url: 'https://bacanplay.com/og-image.jpg',
         width: 1200,
-        height: 630,  
-        alt: "Captura de pantalla del sitio",  
+        height: 630,
+        alt: "Captura de pantalla del sitio",
       }
     ],
     locale: "es_AR",
@@ -35,7 +35,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "BACAN",
     description: "BACAN - Lo más importante de este juego no es ganar, sino, no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos!",
-    images: ["https://bacanplay.com/og-image.jpg"],  
+    images: ["https://bacanplay.com/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",

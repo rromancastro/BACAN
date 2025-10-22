@@ -47,7 +47,7 @@ export const NavBar = () => {
                 </div>
             </div>
             <div id="navUtilities">
-                <a id="navUtilitiesButton" href="#">
+                <a id="navUtilitiesButton" target="_blank" href="https://www.verkami.com/projects/41667-bacan-el-juego-de-cartas-que-convierte-cualquier-mesa-en-pura-risa-y-diversion?utm_source=bacan&utm_medium=web&utm_campaign=verkami">
                     <p id="navUtilitiesButtonText">Quiero mi mazo</p>
                 </a>
             </div>

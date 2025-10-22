@@ -61,7 +61,7 @@ export const EigthSection = () => {
                     : <h3>
                         CADA
                         JUGADA
-                        CUENTA, 
+                        CUENTA,
                         CADA
                         MOMENTO
                         RIENDO
@@ -80,16 +80,19 @@ export const EigthSection = () => {
                         <h3>AYUDA</h3>
                         {width >= 835 ? <p>¿Alguna duda sobre el juego? Ponte en contacto con nosotros a través de<br />nuestras redes. No dejes que tus colegas hagan trampas, conocemos las<br />reglas y podemos ayudarte.</p> : <p>¿Alguna duda sobre el juego? Ponte en contacto con nosotros a través de nuestras redes. No dejes que tus colegas hagan trampas, conocemos las reglas y podemos ayudarte.</p>}
                     </div>
-                    <p>Para consultas comerciales, también pueden contactarnos en <br /><span>bacan.play.oficial@gmail.com</span> o al <span>+34 684487798</span></p>
+                    <p>Para consultas comerciales, también pueden contactarnos en <br /><span>bacan.play.oficial@gmail.com</span> o al <a target="_blank" href="https://wa.me/34684487798?text=Hola Bacanes! Necesito ayuda">+34 684487798</a></p>
                 </div>
                 <div style={{opacity: width >= 835 ? 1 : opacityCard2, transition: '1s'}} id="eightSectionDiv3">
                     <h3>REDES SOCIALES</h3>
                     <div>
-                        <a href="#" className="eightSectionDiv3Icons">
+                        <a target="_blank" href="https://www.instagram.com/bacan.play.oficial/" className="eightSectionDiv3Icons">
                             <Image className="socialMediaIcon" src="/eightSection/instagram.png" alt="Instagram" width={48} height={48} />
                         </a>
-                        <a href="#" className="eightSectionDiv3Icons">
+                        <a target="_blank" href="https://www.youtube.com/@BacanPlay" className="eightSectionDiv3Icons">
                             <Image className="socialMediaIcon" src="/eightSection/youtube.png" alt="Youtube" width={48} height={48} />
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61581539213604" className="eightSectionDiv3Icons">
+                            <Image className="socialMediaIcon" src="/eightSection/facebook.png" alt="Facebook" width={48} height={48} />
                         </a>
                     </div>
                 </div>
