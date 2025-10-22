@@ -34,7 +34,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BACAN",
-    description: "BACAN - Lo más importante de este juego no es ganar, sino, no perder... Es coña, lo importante es ganarle a tus amigos, tu pareja e incluso a tus sobrinitos!",
+    description: "Bacán: el juego de cartas que convierte cualquier mesa en pura risa y diversión. ¡Rápido, sencillo y con mucho jaleo! Descarta, espeja, utiliza poderes y canta lo menos posible... o estás fuera.",
     images: ["https://bacanplay.com/og-image.jpg"],
   },
   icons: {
@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <Script
+        {/* <Script
           id="gtm-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
                 })(window,document,'script','dataLayer','GTM-TDV93XWV');
             `,
           }}
-        />
+        /> */}
         <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
