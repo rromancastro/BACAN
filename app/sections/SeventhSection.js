@@ -21,7 +21,7 @@ export const SeventhSection = () => {
         <section id="seventhSection">
             <div id="seventhSectionContent">
                 { width >= 835 ?
-                    isPlaying ? <iframe id="seventhSectionIframe" src="https://www.youtube.com/embed/TC3xpdEKrPk?si=nzRMsSMRX_hG3LPV&autoplay=1&controls=1&rel=0&modestbranding=1" title="Cómo jugar Bacan" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe> :
+                    isPlaying ? <iframe id="seventhSectionIframe" src="https://www.youtube.com/embed/6Zg7eu9Cb58?si=LW9NZ9fGES7Jhu-A&autoplay=1&controls=1&rel=0&modestbranding=1" title="Cómo jugar Bacan" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe> :
                     <div id="seventhSectionPlaceholder">
                         <h2 id="seventhSectionPlaceholderH2">¿CÓMO JUGAR BACAN?</h2>
                         <p id="seventhSectionPlaceholderP">Si estás triste porque nadie te enseñó a jugar, no lo estés.<br />Ponle fin a tu tristeza y aprende a jugar con este video. ¡El placer del autodidacta al alcance de un botón! </p>
@@ -30,7 +30,7 @@ export const SeventhSection = () => {
 
                     : <>
                     <h2 id="seventhSectionContentH2Mobile">¿CÓMO JUGAR<br />BACAN?</h2>
-                    {isPlaying ? <iframe id="seventhSectionIframe" src="https://www.youtube.com/embed/TC3xpdEKrPk?si=nzRMsSMRX_hG3LPV&autoplay=1&controls=1&rel=0&modestbranding=1" title="Cómo jugar Bacan" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe> : <div id="seventhSectionPlaceholder">
+                    {isPlaying ? <iframe id="seventhSectionIframe" src="https://www.youtube.com/embed/6Zg7eu9Cb58?si=LW9NZ9fGES7Jhu-A&autoplay=1&controls=1&rel=0&modestbranding=1" title="Cómo jugar Bacan" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe> : <div id="seventhSectionPlaceholder">
                         <Image onClick={() => setIsPlaying(true)} src="/seventhSection/Youtube_logo.png" alt="youtube logo" width={100} height={100} id="seventhSectionPlaceholderIcon" />
                     </div>}
                     <p id="seventhSectionContentPMobile">Si estás triste porque nadie te enseñó a jugar, no lo estés. Ponle fin a tu tristeza y aprende a jugar con este video. ¡El placer del autodidacta al alcance de un botón!</p>
